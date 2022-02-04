@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Tech Tracker '22</title>
+
+    <!-- Web Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57"        href="img/favicon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60"        href="img/favicon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72"        href="img/favicon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76"        href="img/favicon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114"      href="img/favicon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120"      href="img/favicon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144"      href="img/favicon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152"      href="img/favicon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180"      href="img/favicon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32"   href="img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96"   href="img/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16"   href="img/favicon-16x16.png">
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="Tech Tracker '22"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="Tech Tracker - AI Brand Analysis of Online Tech Reviews and Social Opinions"/>
+    <meta property="og:url" content="http://techtracker.eastus.cloudapp.azure.com/techtracker"/>
+    <meta property="og:image" content="http://techtracker.eastus.cloudapp.azure.com/techtracker/img/tech-tracker-logo-large.png">
+
+
+    <!-- Scripts-->
+    <script type="text/javascript" src="/iportal/jsapi"></script>
+	<!-- Already included in JSAPI
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    Scripts-->
+    <script type="text/javascript" src="js/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="js/featherlight.min.js"></script>
+    <script type="text/javascript" src="js/functions.js?v=1.2.1beta"></script>
+    <script type="text/javascript" src="js/techtracker-viewers.js?v=1.2.1beta"></script>
+    <!-- Factoid Carousel - Homepage only -->
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/carouselInit.js?v=1.2.1beta"></script>
+    
+    
+    <script>
+        function mediaBreakdownCB(evt) {
+
+            if (evt.type == "refresh") {
+                if (this.flipped) {
+                    var vid = this.viewer.getId();
+                    this.$id.find("#" + vid + "_" + this.id + "-small").hide();
+                    this.$id.find("#" + vid + "_" + this.id + "-large").show();
+                }
+            }
+        }
+
+        $(document).ready(function () {
+
+            var viewerData = [];
+            viewerData.push({id: "keyStats", viewName: "Main Key Stats.rptdesign", height: 200, filters: {pPeriod: pid}, sets: ["period"]});
+            viewerData.push({id: "topCandidates", viewName: "Main Top Candidates.rptdesign", height: 436, filters: {pPeriod: pid}, sets: ["topCandidates", "period"]});
+            viewerData.push({id: "topTopics", viewName: "Main Top Topics.rptdesign", height: 436, filters: {pPeriod: pid}, sets: ["topTopics", "period"]});
+            viewerData.push({id: "mediaBreakdown", viewName: "Main Media Breakdown.rptdesign", height: 312, filters: {pPeriod: pid}, sets: ["mediaBreakdown", "period"], callback: mediaBreakdownCB});
+
+            viewerData.push({id: "keywordsCloud", viewName: "Main Keywords Cloud.rptdesign", height: 600, popup: true});
+            viewerData.push({id: "statesMap", viewName: "Main State Heatmap.rptdesign", height: 600, popup: true});
+            EV.initialize(viewerData);
+        });
+
+    </script>
+
+<script type="text/javascript">(function() {var walkme = document.createElement('script'); walkme.type = 'text/javascript'; walkme.async = true; walkme.src = 'http://cdn.walkme.com/users/c3a6e9dcce4d42798d27207362f992fa/walkme_c3a6e9dcce4d42798d27207362f992fa.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(walkme, s); window._walkmeConfig = {smartLoad:true}; })();</script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css?v=1.2.1beta" type="text/css"/>
+    <link rel="stylesheet" href="css/featherlight.css?v=1.2.1beta" type="text/css"/>
+    <link rel="stylesheet" href="css/owl.carousel.css?v=1.2.1beta" type="text/css"/>
+    <link rel="stylesheet" href="css/owl.transitions.css?v=1.2.1beta" type="text/css"/>
+
+</head>
+
+
+<body class="home">
+
+<!-- Google Tag Manager -->
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-F9X6"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>(function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+        'gtm.start': new Date().getTime(), event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src =
+            '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-F9X6');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Sticky Header -->
+<div id="menuHeader">
+	
+	<!-- Header Wrapper -->
+    <div class="headerWrapper">
+	    
+	    <!-- Menu -->
+        <ul id="menu">
+            <li><a href="main.html" class="home"></a></li>
+            <li>
+                <a  class="share">Share</a>
+					<span id="shareIcons">
+						<a href="#" class="shareIcon twitter"></a>
+						<a href="#" class="shareIcon facebook"></a>
+						<a href="#" class="shareIcon linkedin"></a>
+						<a href="#" class="shareIcon email"></a>
+					</span>
+            </li>
+        </ul><!-- End Menu -->
+        
+        <!-- ET16 Logo -->
+        <img src="img/MagellanWtWd.png" alt="2022 Tech Tracker" width="117" height="25"/>&nbsp;<h4>Analysis Of Online Tech Reviews and Social Opinions</h4>
+        
+    </div><!-- End Header Wrapper -->
+    
+
+</div>
+
+<!-- Front Door -->
+<div id="frontdoor">
+    <img src="img/MAGELLANlogo.png" alt="Tech Tracker 2022"/>
+
+    <h1>AI Powered Brand Analysis</h1>
+    <span>Cognitive Analysis Of Mobile Device Reviews And Social Media Coverage</span>
+</div>
+
+<!-- Period Select -->
+<div id="periodSelectContainer" class="periodSelectorMainPage clearfix" style="position: relative; top: 0px; left: 0px;">
+    <label>You are viewing data from the:</label>
+    <div class="select-periodSelect-style">
+        <select id="periodSelect"></select>
+    </div>
+</div>
+<div id="periodSelectSrollFixContainer" style="display:none"></div>
+
+<!-- Wrapper to center all content -->
+<div class="contentWrapper">
+
+
+    <!-- Key Stats -->
+    <div id="keyStats" class="keyStats clearfix"></div>
+
+	
+    <!-- Methology Call Out
+    <div id="methodology">
+        <span><strong>*Methodology:</strong> How is the sentiment of an article determined?</span>&nbsp;&nbsp;&nbsp;<a href="#">Learn More</a>
+    </div>
+    -->
+    
+    <!--Factoid Carousel -->
+    <div id="factoidCarousel">
+	    
+	    <!-- Left/Right Controls -->
+	    <div id="factoidLeft" class="carouselControl"></div>
+	    <div id="factoidRight" class="carouselControl"></div>
+	    
+	    <span>Did you know?</span>
+	    <div id="factoids">
+			<div class="item">Mobile phone addiction is called nomophobia - the fear of being without one's phone or without signal; around 200 million people are believed to suffer from it.</div>
+			<div class="item">The average person checks their phone every 6 minutes (approximately 160 times per day).</div>
+			<div class="item">There are more mobile phones in the world than people.</div>
+			<div class="item">In Finland, throwing mobile phones is a sport. The distance record, to date, is set at 97 meters for men, and 40 meters for women.</div>
+			<div class="item">The Nokia 1100 was the best-selling electrical gadget in history, selling more than 250 million phones!</div>
+			<div class="item">Today's cell phones contain more than 100,000x computing power than the computer on-board the Apollo 11 moon landing controller.</div>
+			<div class="item">It is estimated that there are 5x as many cell phones as personal computers.</div>
+			<div class="item">A recent survey suggests that 47% of millennials use their smartphone to avoid the people around them. Some call this "phubbing".</div>
+
+    	    </div>
+	    
+    </div>
+
+    <!-- Top Candidates -->
+    <div id="topCandidatesSection" class="module">
+
+        <h2>Top Devices</h2>
+
+        <h3>by mentions and sentiment</h3>
+
+        <!-- Filter Button -->
+        <a id="topCandidatesFilter" href="#" class="filterButton">
+            <span class="textLabel">FILTER</span>
+				<span class="filterIcon">
+					<span class="line"></span>
+					<span class="circle"></span>
+					<span class="line"></span>
+					<span class="circle"></span>
+					<span class="line"></span>
+					<span class="circle"></span>
+				</span>
+        </a>
+
+        <!-- Filter Pane -->
+        <div class="filterPane">
+            <form data-set="topCandidates">
+                <h5>Filters</h5>
+<!-- GLO
+                <h6>Brands</h6>
+                <ul class="clearfix">
+                    <li>
+                        <input type="radio" id="candidates-partyShowAll" name="pParty" value="All" checked>
+                        <label for="candidates-partyShowAll">Show All</label>
+
+                        <div class="check"></div>
+                    </li>
+                    <li>
+                        <input type="radio" id="candidates-partyDemocrats" name="pParty" value="Democrat">
+                        <label for="candidates-partyDemocrats">Apple</label>
+
+                        <div class="check democrat"></div>
+                    </li>
+
+                    <li>
+                        <input type="radio" id="candidates-partyRepublicans" name="pParty" value="Republican">
+                        <label for="candidates-partyRepublicans">Android</label>
+
+                        <div class="check"></div>
+                    </li>
+                </ul>
+-->
+                <h6>Online Sentiment</h6>
+                <ul class="clearfix">
+                    <li>
+                        <input type="radio" id="candidates-sentimentShowAll" name="pSentiment" value="ALL" checked>
+                        <label for="candidates-sentimentShowAll">Show All</label>
+
+                        <div class="check"></div>
+                    </li>
+                    <li>
+                        <input type="radio" id="candidates-sentimentPositive" name="pSentiment" value="POS">
+                        <label for="candidates-sentimentPositive">Positive mentions only</label>
+
+                        <div class="check"></div>
+                    </li>
+
+                    <li>
+                        <input type="radio" id="candidates-sentimentNegative" name="pSentiment" value="NEG">
+                        <label for="candidates-sentimentNegative">Negative mentions only</label>
+
+                        <div class="check"></div>
+                    </li>
+
+                    <li>
+                        <input type="radio" id="candidates-sentimentPositiveNegative" name="pSentiment" value="POSNEG">
+                        <label for="candidates-sentimentPositiveNegative">Positive and Negative mentions only</label>
+
+                        <div class="check"></div>
+                    </li>
+                </ul>
+
+                <h6>Sort By</h6>
+                <ul class="clearfix">
+                    <li>
+                        <input type="radio" id="candidates-sortDesc" name="pSorting" value="DESC" checked>
+                        <label for="candidates-sortDesc">Descending</label>
+
+                        <div class="check"></div>
+                    </li>
+                    <li>
+                        <input type="radio" id="candidates-sortAsc" name="pSorting" value="ASC">
+                        <label for="candidates-sortAsc">Ascending</label>
+
+                        <div class="check"></div>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <!-- End Filter Pane -->
+
+        <!-- Analytic Container -->
+        <div id="topCandidates"></div>
+
+        <!-- SHOW MORE -->
+
+        <a href="#" class="showMoreButton" data-def="topCandidates">SHOW MORE</a>
+
+
+    </div>
+
+    <!-- Top Topics -->
+    <div id="topTopicsSection" class="module">
+
+        <h2>Top Topics</h2>
+
+        <h3>by mentions and sentiment</h3>
+
+        <!-- Filter Button -->
+        <a id="topTopicsFilter" href="#" class="filterButton">
+            <span class="textLabel">FILTER</span>
+				<span class="filterIcon">
+					<span class="line"></span>
+					<span class="circle"></span>
+					<span class="line"></span>
+					<span class="circle"></span>
+					<span class="line"></span>
+					<span class="circle"></span>
+				</span>
+        </a>
+
+        <!-- Filter Pane -->
+        <div class="filterPane">
+            <form data-set="topTopics">
+                <h5>Filters</h5>
+
+                <h6>Media Sentiment</h6>
+                <ul class="clearfix">
+                    <li>
+                        <input type="radio" id="topics-sentimentShowAll" name="pSentiment" value="ALL" checked>
+                        <label for="topics-sentimentShowAll">Show All</label>
+
+                        <div class="check"></div>
+                    </li>
+                    <li>
+                        <input type="radio" id="topics-sentimentPositive" name="pSentiment" value="POS">
+                        <label for="topics-sentimentPositive">Positive mentions only</label>
+
+                        <div class="check"></div>
+                    </li>
+
+                    <li>
+                        <input type="radio" id="topics-sentimentNegative" name="pSentiment" value="NEG">
+                        <label for="topics-sentimentNegative">Negative mentions only</label>
+
+                        <div class="check"></div>
+                    </li>
+
+                    <li>
+                        <input type="radio" id="topics-sentimentPositiveNegative" name="pSentiment" value="POSNEG">
+                        <label for="topics-sentimentPositiveNegative">Positive and Negative mentions only</label>
+
+                        <div class="check"></div>
+                    </li>
+                </ul>
+
+                <h6>Sort By</h6>
+                <ul class="clearfix">
+                    <li>
+                        <input type="radio" id="topics-sortDesc" name="pSorting" value="DESC" checked>
+                        <label for="topics-sortDesc">Descending</label>
+
+                        <div class="check"></div>
+                    </li>
+                    <li>
+                        <input type="radio" id="topics-sortAsc" name="pSorting" value="ASC">
+                        <label for="topics-sortAsc">Ascending</label>
+
+                        <div class="check"></div>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <!-- End Filter Pane -->
+
+        <!-- Analytic Container -->
+        <div id="topTopics"></div>
+
+        <!-- SHOW MORE -->
+        <a href="#" class="showMoreButton" data-def="topTopics">SHOW MORE</a>
+
+    </div>
+
+    <!-- Top Media Sources -->
+    <div id="mediaBreakdownSection" class="module">
+        <h2>Media Breakdown</h2>
+
+        <h3>by media source</h3>
+
+
+        <!-- Filter Button -->
+        <a id="mediaBreakdownFilter" href="#" class="filterButton">
+            <span class="textLabel">FILTER</span>
+				<span class="filterIcon">
+					<span class="line"></span>
+					<span class="circle"></span>
+					<span class="line"></span>
+					<span class="circle"></span>
+					<span class="line"></span>
+					<span class="circle"></span>
+				</span>
+        </a>
+
+        <!-- Filter Pane -->
+        <div class="filterPane">
+            <form data-set="mediaBreakdown">
+                <h5>Filters</h5>
+
+                <h6>Media Type</h6>
+                <ul class="clearfix">
+                    <li>
+                        <input type="radio" id="media-countryAll" name="pCountry" value="ALL" checked>
+                        <label for="media-countryAll">Show All</label>
+
+                        <div class="check"></div>
+                    </li>
+                    <li>
+                        <input type="radio" id="media-countryUS" name="pCountry" value="US">
+                        <label for="media-countryUS">Official Review Sites only</label>
+
+                        <div class="check"></div>
+                    </li>
+
+                    <li>
+                        <input type="radio" id="media-countryIntl" name="pCountry" value="INTL">
+                        <label for="media-countryIntl">Social Media (tweets & blogs) only</label>
+
+                        <div class="check"></div>
+                    </li>
+                </ul>
+
+                <h6>Online Sentiment</h6>
+                <ul class="clearfix">
+                    <li>
+                        <input type="radio" id="media-sentimentShowAll" name="pSentiment" value="ALL" checked>
+                        <label for="media-sentimentShowAll">Show All</label>
+
+                        <div class="check"></div>
+                    </li>
+                    <li>
+                        <input type="radio" id="media-sentimentPositive" name="pSentiment" value="POS">
+                        <label for="media-sentimentPositive">Positive mentions only</label>
+
+                        <div class="check"></div>
+                    </li>
+
+                    <li>
+                        <input type="radio" id="media-sentimentNegative" name="pSentiment" value="NEG">
+                        <label for="media-sentimentNegative">Negative mentions only</label>
+
+                        <div class="check"></div>
+                    </li>
+
+                    <li>
+                        <input type="radio" id="media-sentimentPositiveNegative" name="pSentiment" value="POSNEG">
+                        <label for="media-sentimentPositiveNegative">Positive and Negative mentions only</label>
+
+                        <div class="check"></div>
+                    </li>
+                </ul>
+
+                <h5>Sort By</h5>                                                                       
+                <ul class="clearfix">
+                    <li>
+                        <input type="radio" id="media-sortDesc" name="pSorting" value="DESC" checked>
+                        <label for="media-sortDesc">Descending</label>
+
+                        <div class="check"></div>
+                    </li>
+                    <li>
+                        <input type="radio" id="media-sortAsc" name="pSorting" value="ASC">
+                        <label for="media-sortAsc">Ascending</label>
+
+                        <div class="check"></div>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <!-- End Filter Pane -->
+
+        <!-- Analytic Container -->
+        <div id="mediaBreakdown"></div>
+
+        <a href="#" class="showMoreButton" data-def="mediaBreakdown" data-flipviz="true">SHOW MORE</a>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+
+        <!-- Left -->
+        <div id="copyright">
+            Copyright &copy; 2019 Open Text SA or Open Text ULC (in Canada). All rights reserved.
+        </div>
+
+        <!-- Powered by OpenText -->
+        <div id="poweredBy">
+            <a href="http://www.opentext.com" target="_blank"><img src="img/powered-by-opentext.png" alt="Powered by OpenText" width="183" height="39"/></a>
+        </div>
+
+
+    </div>
+
+</div>
+<!-- End wrapper -->
+
+</body>
+
+</html>

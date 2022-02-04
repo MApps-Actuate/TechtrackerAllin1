@@ -1,0 +1,2903 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.11.0.v202108101920</property>
+    <list-property name="userProperties">
+        <structure>
+            <property name="name">521.Topics entries.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">521.Topics entries.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">521.Topics entries.width</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">521.Topics entries.height</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">486.Topics entries.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">486.Topics entries.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">486.Topics entries.width</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">486.Topics entries.height</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">508.Topics entries.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">508.Topics entries.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">508.Topics entries.width</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">508.Topics entries.height</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">369.Candidates entries.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">369.Candidates entries.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">369.Candidates entries.width</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">369.Candidates entries.height</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">369.Topics entries.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">369.Topics entries.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">369.Topics entries.width</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">369.Topics entries.height</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">17.Candidates entries.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">17.Candidates entries.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">17.Candidates entries.width</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">17.Candidates entries.height</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">346.Candidates entries.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">346.Candidates entries.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">346.Candidates entries.width</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">346.Candidates entries.height</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">346.Profile Stats DS.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">346.Profile Stats DS.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">346.Profile Stats DS.width</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">346.Profile Stats DS.height</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">190.Candidates entries.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">190.Candidates entries.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">190.Candidates entries.width</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">190.Candidates entries.height</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">190.Profile Comparasion Topics DS.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">190.Profile Comparasion Topics DS.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">190.Profile Comparasion Topics DS.width</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">190.Profile Comparasion Topics DS.height</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">190.Topics entries.x</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">190.Topics entries.y</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">190.Topics entries.width</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+        <structure>
+            <property name="name">190.Topics entries.height</property>
+            <property name="type">integer</property>
+            <property name="isVisible">false</property>
+        </structure>
+    </list-property>
+    <property name="521.Topics entries.x">267</property>
+    <property name="521.Topics entries.y">9</property>
+    <property name="521.Topics entries.width">150</property>
+    <property name="521.Topics entries.height">200</property>
+    <property name="486.Topics entries.x">289</property>
+    <property name="486.Topics entries.y">11</property>
+    <property name="486.Topics entries.width">150</property>
+    <property name="486.Topics entries.height">200</property>
+    <property name="508.Topics entries.x">296</property>
+    <property name="508.Topics entries.y">8</property>
+    <property name="508.Topics entries.width">150</property>
+    <property name="508.Topics entries.height">200</property>
+    <property name="369.Candidates entries.x">422</property>
+    <property name="369.Candidates entries.y">6</property>
+    <property name="369.Candidates entries.width">150</property>
+    <property name="369.Candidates entries.height">200</property>
+    <property name="369.Topics entries.x">252</property>
+    <property name="369.Topics entries.y">87</property>
+    <property name="369.Topics entries.width">150</property>
+    <property name="369.Topics entries.height">200</property>
+    <property name="17.Candidates entries.x">365</property>
+    <property name="17.Candidates entries.y">8</property>
+    <property name="17.Candidates entries.width">150</property>
+    <property name="17.Candidates entries.height">200</property>
+    <property name="346.Candidates entries.x">295</property>
+    <property name="346.Candidates entries.y">12</property>
+    <property name="346.Candidates entries.width">150</property>
+    <property name="346.Candidates entries.height">200</property>
+    <property name="346.Profile Stats DS.x">44</property>
+    <property name="346.Profile Stats DS.y">12</property>
+    <property name="346.Profile Stats DS.width">150</property>
+    <property name="346.Profile Stats DS.height">200</property>
+    <property name="190.Candidates entries.x">689</property>
+    <property name="190.Candidates entries.y">24</property>
+    <property name="190.Candidates entries.width">150</property>
+    <property name="190.Candidates entries.height">200</property>
+    <property name="190.Profile Comparasion Topics DS.x">370</property>
+    <property name="190.Profile Comparasion Topics DS.y">3</property>
+    <property name="190.Profile Comparasion Topics DS.width">150</property>
+    <property name="190.Profile Comparasion Topics DS.height">200</property>
+    <property name="190.Topics entries.x">24</property>
+    <property name="190.Topics entries.y">19</property>
+    <property name="190.Topics entries.width">150</property>
+    <property name="190.Topics entries.height">200</property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">708</property>
+        </structure>
+    </list-property>
+    <data-sources>
+        <data-mart-data-source name="Data Source" id="2">
+            <property name="datamartURL">Data Objects/Techtraker old - Needed to generate the new one</property>
+            <property name="accessType">latest</property>
+        </data-mart-data-source>
+        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="Flat File" id="699">
+            <property name="HOME">data/</property>
+            <property name="DELIMTYPE">COMMA</property>
+            <property name="CHARSET">UTF-8</property>
+            <property name="INCLCOLUMNNAME">YES</property>
+            <property name="INCLTYPELINE">NO</property>
+            <property name="TRAILNULLCOLS">NO</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <data-mart-data-set name="Key Stats Articles DS" id="8">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">TotalArticles</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">TotalArticles</text-property>
+                    <text-property name="heading">TotalArticles</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Type</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Type</text-property>
+                    <text-property name="heading">Type</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Period</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Period</text-property>
+                    <text-property name="heading">Period</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">TotalArticles</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Type</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Period</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Key Stats Articles</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">TotalArticles</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Type</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Period</property>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
+        <data-mart-data-set name="Key Stats Trending DS" id="9">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">keywords</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">keywords</text-property>
+                    <text-property name="heading">keywords</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">states</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">states</text-property>
+                    <text-property name="heading">states</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Period</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Period</text-property>
+                    <text-property name="heading">Period</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">keywords</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">states</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Period</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Key Stats Trending</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">keywords</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">states</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Period</property>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
+        <data-mart-data-set name="Keywords Cloud DS" id="10">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">weeknum new</property>
+                    <expression name="expression" type="javascript">if (BirtDateTime.month(row["weeknum"]) &lt; 2) {&#13;
+	myYear = (2022 - BirtDateTime.year(row["weeknum"]))&#13;
+} else {&#13;
+	myYear = (2021 - BirtDateTime.year(row["weeknum"]))&#13;
+}&#13;
+BirtDateTime.addYear(row["weeknum"],myYear)</expression>
+                    <property name="dataType">date</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">weeknum</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">weeknum</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">keyword</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">keyword</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">total</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">total</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">rank</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">rank</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">weeknum new</property>
+                    <property name="analysis">dimension</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">weeknum</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">keyword</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">total</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">rank</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">weeknum new</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Keywords Cloud</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">weeknum</property>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">keyword</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">total</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">rank</property>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
+        <data-mart-data-set name="Media Breakdown DS" id="11">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">period</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">period</text-property>
+                    <text-property name="heading">period</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">positive</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">positive</text-property>
+                    <text-property name="heading">positive</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">negative</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">negative</text-property>
+                    <text-property name="heading">negative</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">neutral</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">neutral</text-property>
+                    <text-property name="heading">neutral</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">agency</property>
+                    <property name="analysis">dimension</property>
+                    <property name="horizontalAlign">left</property>
+                    <structure name="valueFormat"/>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">countrycode</property>
+                    <property name="analysis">dimension</property>
+                    <property name="horizontalAlign">left</property>
+                    <structure name="valueFormat"/>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">period</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">positive</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">negative</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">neutral</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">agency</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">countrycode</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Media Breakdown</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">period</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">positive</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">negative</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">neutral</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">agency</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">countrycode</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
+        <data-mart-data-set name="State Heatmap DS" id="12">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">week new</property>
+                    <expression name="expression" type="javascript">if (BirtDateTime.month(row["week"]) &lt; 2) {&#13;
+	myYear = (2022 - BirtDateTime.year(row["week"]))&#13;
+} else {&#13;
+	myYear = (2021 - BirtDateTime.year(row["week"]))&#13;
+}&#13;
+BirtDateTime.addYear(row["week"],myYear)</expression>
+                    <property name="dataType">date</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">week</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">week</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">name</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">abbreviation</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">abbreviation</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">total</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">total</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">week new</property>
+                    <property name="analysis">dimension</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">week</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">abbreviation</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">total</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">week new</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">State Heatmap</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">week</property>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">name</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">abbreviation</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">total</property>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
+        <data-mart-data-set name="Top Candidates DS" id="13">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">candidateid</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">candidateid</text-property>
+                    <text-property name="heading">candidateid</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">period</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">period</text-property>
+                    <text-property name="heading">period</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">positive</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">positive</text-property>
+                    <text-property name="heading">positive</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">negative</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">negative</text-property>
+                    <text-property name="heading">negative</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">neutral</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">neutral</text-property>
+                    <text-property name="heading">neutral</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">candidateid</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">period</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">positive</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">negative</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">neutral</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Top Candidates</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">candidateid</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">period</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">positive</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">negative</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">neutral</property>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
+        <data-mart-data-set name="Top Topics DS" id="16">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">topicid</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">topicid</text-property>
+                    <text-property name="heading">topicid</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">period</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">period</text-property>
+                    <text-property name="heading">period</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">positive</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">positive</text-property>
+                    <text-property name="heading">positive</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">negative</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">negative</text-property>
+                    <text-property name="heading">negative</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">neutral</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">neutral</text-property>
+                    <text-property name="heading">neutral</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">topicid</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">period</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">positive</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">negative</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">neutral</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Top Topics</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">topicid</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">period</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">positive</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">negative</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">neutral</property>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
+        <data-mart-data-set name="Topic Breakdown DS" id="14">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">pubdatenew</property>
+                    <expression name="expression" type="javascript">if (BirtDateTime.month(row["pubdate"]) &lt; 2) {&#13;
+	myYear = (2022 - BirtDateTime.year(row["pubdate"]))&#13;
+} else {&#13;
+	myYear = (2021 - BirtDateTime.year(row["pubdate"]))&#13;
+}&#13;
+BirtDateTime.addYear(row["pubdate"],myYear)</expression>
+                    <property name="dataType">date</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">agencyId</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">agencyId</text-property>
+                    <text-property name="heading">agencyId</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">agency</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">agency</text-property>
+                    <text-property name="heading">agency</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">countrycode</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">countrycode</text-property>
+                    <text-property name="heading">countrycode</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">topicId</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">topicId</text-property>
+                    <text-property name="heading">topicId</text-property>
+                    <property name="horizontalAlign">left</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">pubdate</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">pubdate</text-property>
+                    <text-property name="heading">pubdate</text-property>
+                    <property name="horizontalAlign">left</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">period</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">period</text-property>
+                    <text-property name="heading">period</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">positive</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">positive</text-property>
+                    <text-property name="heading">positive</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">negative</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">negative</text-property>
+                    <text-property name="heading">negative</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">neutral</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">neutral</text-property>
+                    <text-property name="heading">neutral</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">pubdatenew</property>
+                    <property name="analysis">dimension</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">agencyId</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">agency</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">countrycode</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">topicId</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">pubdate</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">period</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">positive</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">negative</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">neutral</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">pubdatenew</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Topic Breakdown</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">agencyId</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">agency</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">countrycode</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">topicId</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">pubdate</property>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">period</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">positive</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">negative</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">neutral</property>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
+        <data-mart-data-set name="Topic Stats DS" id="15">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">topicid2</property>
+                    <expression name="expression" type="javascript">row["topicid"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">topicid</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">topicid</text-property>
+                    <text-property name="heading">topicid</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">description</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">description</text-property>
+                    <text-property name="heading">description</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Type</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Type</text-property>
+                    <text-property name="heading">Type</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Period</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Period</text-property>
+                    <text-property name="heading">Period</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">TotalArticles</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">TotalArticles</text-property>
+                    <text-property name="heading">TotalArticles</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">topicid2</property>
+                    <property name="analysis">measure</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">description</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Type</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Period</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">TotalArticles</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">topicid</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">topicid2</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Topic Stats</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">description</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Type</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Period</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">TotalArticles</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">topicid</property>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
+        <data-mart-data-set name="Topics Candidate DS" id="7">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">candidateid</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">candidateid</text-property>
+                    <text-property name="heading">candidateid</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">topicid</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">topicid</text-property>
+                    <text-property name="heading">topicid</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">period</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">period</text-property>
+                    <text-property name="heading">period</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">positive</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">positive</text-property>
+                    <text-property name="heading">positive</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">negative</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">negative</text-property>
+                    <text-property name="heading">negative</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">neutral</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">neutral</text-property>
+                    <text-property name="heading">neutral</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">candidateid</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">topicid</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">period</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">positive</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">negative</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">neutral</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Candidate Topics</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">candidateid</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">topicid</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">period</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">positive</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">negative</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">neutral</property>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
+        <data-mart-data-set name="Profile Breakdown DS" id="3">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">pubdatenew</property>
+                    <expression name="expression" type="javascript">if (BirtDateTime.month(row["pubdate"]) &lt; 2) {&#13;
+	myYear = (2022 - BirtDateTime.year(row["pubdate"]))&#13;
+} else {&#13;
+	myYear = (2021 - BirtDateTime.year(row["pubdate"]))&#13;
+}&#13;
+BirtDateTime.addYear(row["pubdate"],myYear)</expression>
+                    <property name="dataType">date</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">agencyId</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">agencyId</text-property>
+                    <text-property name="heading">agencyId</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">agency</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">agency</text-property>
+                    <text-property name="heading">agency</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">countrycode</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">countrycode</text-property>
+                    <text-property name="heading">countrycode</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">candidateId</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">candidateId</text-property>
+                    <text-property name="heading">candidateId</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">pubdate</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">pubdate</text-property>
+                    <text-property name="heading">pubdate</text-property>
+                    <property name="horizontalAlign">left</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">period</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">period</text-property>
+                    <text-property name="heading">period</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">positive</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">positive</text-property>
+                    <text-property name="heading">positive</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">negative</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">negative</text-property>
+                    <text-property name="heading">negative</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">neutral</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">neutral</text-property>
+                    <text-property name="heading">neutral</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">pubdatenew</property>
+                    <property name="analysis">dimension</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">agencyId</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">agency</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">countrycode</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">candidateId</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">pubdate</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">period</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">positive</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">negative</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">neutral</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">pubdatenew</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Candidate Breakdown</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">agencyId</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">agency</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">countrycode</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">candidateId</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">pubdate</property>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">period</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">positive</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">negative</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">neutral</property>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
+        <data-mart-data-set name="Profile Stats DS" id="6">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">candidateid</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">candidateid</text-property>
+                    <text-property name="heading">candidateid</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Type</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Type</text-property>
+                    <text-property name="heading">Type</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Period</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Period</text-property>
+                    <text-property name="heading">Period</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">TotalArticles</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">TotalArticles</text-property>
+                    <text-property name="heading">TotalArticles</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">candidateid</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Type</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Period</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">TotalArticles</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Candidate Stats</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">candidateid</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Type</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Period</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">TotalArticles</property>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
+        <data-mart-data-set name="Profile Comparasion Topics DS" id="5">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">candidateid</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">candidateid</text-property>
+                    <text-property name="heading">candidateid</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">topicid</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">topicid</text-property>
+                    <text-property name="heading">topicid</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">Period</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Period</text-property>
+                    <text-property name="heading">Period</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">positive</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">positive</text-property>
+                    <text-property name="heading">positive</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">negative</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">negative</text-property>
+                    <text-property name="heading">negative</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">neutral</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">neutral</text-property>
+                    <text-property name="heading">neutral</text-property>
+                    <property name="horizontalAlign">right</property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">candidateid</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">topicid</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Period</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">positive</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">negative</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">neutral</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <property name="dataObject">Candidate Comparasion Topics</property>
+            <list-property name="selectedColumns">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">candidateid</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">topicid</property>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Period</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">positive</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">negative</property>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">neutral</property>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+        </data-mart-data-set>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Candidates entries" id="708">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">id</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">id</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">value</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">value</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">brand</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">brand</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">id</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">value</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">brand</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Flat File</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">id</property>
+                    <property name="nativeName">id</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">value</property>
+                    <property name="nativeName">value</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">brand</property>
+                    <property name="nativeName">brand</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "id", "value", "brand" from "candidates.csv" : {"id","id",INT;"value","value",STRING;"brand","brand",STRING}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>id</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>id</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>value</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>value</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>brand</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>brand</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Topics entries" id="700">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">id</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">id</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">value</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">value</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">id</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">value</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Flat File</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">id</property>
+                    <property name="nativeName">id</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">value</property>
+                    <property name="nativeName">value</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "id", "value" from "topics.csv" : {"id","id",STRING;"value","value",STRING}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>id</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>id</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>value</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>value</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <property name="linkedDataModels">
+        <linked-data-model name="Key Stats Articles" id="396">
+            <property name="aliasDataSets">
+                <alias-data-set name="Key Stats Articles" id="408">
+                    <property name="originDataSet">Key Stats Articles DS</property>
+                </alias-data-set>
+            </property>
+            <property name="categories">
+                <category name="Key Stats Articles DS" id="409">
+                    <property name="categoryColumns">
+                        <category-column name="TotalArticles" id="410">
+                            <property name="aliasDataSet">Key Stats Articles/Key Stats Articles</property>
+                            <property name="resultSetColumnName">TotalArticles</property>
+                        </category-column>
+                        <category-column name="Type" id="411">
+                            <property name="aliasDataSet">Key Stats Articles/Key Stats Articles</property>
+                            <property name="resultSetColumnName">Type</property>
+                        </category-column>
+                        <category-column name="Period" id="412">
+                            <property name="aliasDataSet">Key Stats Articles/Key Stats Articles</property>
+                            <property name="resultSetColumnName">Period</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+        <linked-data-model name="Key Stats Trending" id="413">
+            <property name="aliasDataSets">
+                <alias-data-set name="Key Stats Trending" id="419">
+                    <property name="originDataSet">Key Stats Trending DS</property>
+                </alias-data-set>
+            </property>
+            <property name="categories">
+                <category name="Key Stats Trending DS" id="420">
+                    <property name="categoryColumns">
+                        <category-column name="keywords" id="421">
+                            <property name="aliasDataSet">Key Stats Trending/Key Stats Trending</property>
+                            <property name="resultSetColumnName">keywords</property>
+                        </category-column>
+                        <category-column name="states" id="422">
+                            <property name="aliasDataSet">Key Stats Trending/Key Stats Trending</property>
+                            <property name="resultSetColumnName">states</property>
+                        </category-column>
+                        <category-column name="Period" id="423">
+                            <property name="aliasDataSet">Key Stats Trending/Key Stats Trending</property>
+                            <property name="resultSetColumnName">Period</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+        <linked-data-model name="Keywords Cloud" id="424">
+            <property name="aliasDataSets">
+                <alias-data-set name="Keywords Cloud" id="430">
+                    <property name="originDataSet">Keywords Cloud DS</property>
+                </alias-data-set>
+            </property>
+            <property name="categories">
+                <category name="Keywords Cloud DS" id="431">
+                    <property name="categoryColumns">
+                        <category-column name="keyword" id="433">
+                            <property name="aliasDataSet">Keywords Cloud/Keywords Cloud</property>
+                            <property name="resultSetColumnName">keyword</property>
+                        </category-column>
+                        <category-column name="total" id="434">
+                            <property name="aliasDataSet">Keywords Cloud/Keywords Cloud</property>
+                            <property name="resultSetColumnName">total</property>
+                        </category-column>
+                        <category-column name="rank" id="435">
+                            <property name="aliasDataSet">Keywords Cloud/Keywords Cloud</property>
+                            <property name="resultSetColumnName">rank</property>
+                        </category-column>
+                        <category-column name="weeknum" id="633">
+                            <property name="aliasDataSet">Keywords Cloud/Keywords Cloud</property>
+                            <property name="resultSetColumnName">weeknum new</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+        <linked-data-model name="Media Breakdown" id="436">
+            <property name="aliasDataSets">
+                <alias-data-set name="Media Breakdown" id="594">
+                    <property name="originDataSet">Media Breakdown DS</property>
+                </alias-data-set>
+            </property>
+            <property name="categories">
+                <category name="Media Breakdown DS" id="595">
+                    <property name="categoryColumns">
+                        <category-column name="period" id="598">
+                            <property name="aliasDataSet">Media Breakdown/Media Breakdown</property>
+                            <property name="resultSetColumnName">period</property>
+                        </category-column>
+                        <category-column name="positive" id="599">
+                            <property name="aliasDataSet">Media Breakdown/Media Breakdown</property>
+                            <property name="resultSetColumnName">positive</property>
+                        </category-column>
+                        <category-column name="negative" id="600">
+                            <property name="aliasDataSet">Media Breakdown/Media Breakdown</property>
+                            <property name="resultSetColumnName">negative</property>
+                        </category-column>
+                        <category-column name="neutral" id="601">
+                            <property name="aliasDataSet">Media Breakdown/Media Breakdown</property>
+                            <property name="resultSetColumnName">neutral</property>
+                        </category-column>
+                        <category-column name="agency" id="602">
+                            <property name="aliasDataSet">Media Breakdown/Media Breakdown</property>
+                            <property name="resultSetColumnName">agency</property>
+                        </category-column>
+                        <category-column name="countrycode" id="603">
+                            <property name="aliasDataSet">Media Breakdown/Media Breakdown</property>
+                            <property name="resultSetColumnName">countrycode</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+        <linked-data-model name="State Heatmap" id="453">
+            <property name="aliasDataSets">
+                <alias-data-set name="State Heatmap" id="462">
+                    <property name="originDataSet">State Heatmap DS</property>
+                </alias-data-set>
+            </property>
+            <property name="categories">
+                <category name="State Heatmap DS" id="463">
+                    <property name="categoryColumns">
+                        <category-column name="name" id="465">
+                            <property name="aliasDataSet">State Heatmap/State Heatmap</property>
+                            <property name="resultSetColumnName">name</property>
+                        </category-column>
+                        <category-column name="abbreviation" id="466">
+                            <property name="aliasDataSet">State Heatmap/State Heatmap</property>
+                            <property name="resultSetColumnName">abbreviation</property>
+                        </category-column>
+                        <category-column name="total" id="467">
+                            <property name="aliasDataSet">State Heatmap/State Heatmap</property>
+                            <property name="resultSetColumnName">total</property>
+                        </category-column>
+                        <category-column name="week" id="634">
+                            <property name="aliasDataSet">State Heatmap/State Heatmap</property>
+                            <property name="resultSetColumnName">week new</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+        <linked-data-model name="Top Candidates" id="468">
+            <property name="aliasDataSets">
+                <alias-data-set name="Top Candidates" id="604">
+                    <property name="originDataSet">Top Candidates DS</property>
+                </alias-data-set>
+                <alias-data-set name="Candidates entries" id="709">
+                    <property name="originDataSet">Candidates entries</property>
+                </alias-data-set>
+            </property>
+            <property name="columnLinks">
+                <column-link id="714">
+                    <property name="leftAliasDataSet">Top Candidates/Top Candidates</property>
+                    <property name="rightAliasDataSet">Top Candidates/Candidates entries</property>
+                    <property name="columnLinkDetails">
+                        <column-link-detail id="715">
+                            <structure name="leftColumn">
+                                <property name="position">1</property>
+                                <property name="name">candidateid</property>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure name="rightColumn">
+                                <property name="position">1</property>
+                                <property name="name">id</property>
+                                <property name="dataType">integer</property>
+                            </structure>
+                        </column-link-detail>
+                    </property>
+                    <property name="allowPushdown">false</property>
+                </column-link>
+            </property>
+            <property name="categories">
+                <category name="Top Candidates DS" id="605">
+                    <property name="categoryColumns">
+                        <category-column name="candidateid" id="606">
+                            <property name="aliasDataSet">Top Candidates/Top Candidates</property>
+                            <property name="resultSetColumnName">candidateid</property>
+                        </category-column>
+                        <category-column name="period" id="609">
+                            <property name="aliasDataSet">Top Candidates/Top Candidates</property>
+                            <property name="resultSetColumnName">period</property>
+                        </category-column>
+                        <category-column name="positive" id="610">
+                            <property name="aliasDataSet">Top Candidates/Top Candidates</property>
+                            <property name="resultSetColumnName">positive</property>
+                        </category-column>
+                        <category-column name="negative" id="611">
+                            <property name="aliasDataSet">Top Candidates/Top Candidates</property>
+                            <property name="resultSetColumnName">negative</property>
+                        </category-column>
+                        <category-column name="neutral" id="612">
+                            <property name="aliasDataSet">Top Candidates/Top Candidates</property>
+                            <property name="resultSetColumnName">neutral</property>
+                        </category-column>
+                        <category-column name="name" id="712">
+                            <property name="aliasDataSet">Top Candidates/Candidates entries</property>
+                            <property name="resultSetColumnName">value</property>
+                        </category-column>
+                        <category-column name="brand" id="713">
+                            <property name="aliasDataSet">Top Candidates/Candidates entries</property>
+                            <property name="resultSetColumnName">brand</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+        <linked-data-model name="Top Topics" id="521">
+            <property name="aliasDataSets">
+                <alias-data-set name="Top Topics" id="624">
+                    <property name="originDataSet">Top Topics DS</property>
+                </alias-data-set>
+                <alias-data-set name="Topics entries" id="701">
+                    <property name="originDataSet">Topics entries</property>
+                </alias-data-set>
+            </property>
+            <property name="columnLinks">
+                <column-link id="705">
+                    <property name="leftAliasDataSet">Top Topics/Top Topics</property>
+                    <property name="rightAliasDataSet">Top Topics/Topics entries</property>
+                    <property name="columnLinkDetails">
+                        <column-link-detail id="706">
+                            <structure name="leftColumn">
+                                <property name="position">1</property>
+                                <property name="name">topicid</property>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure name="rightColumn">
+                                <property name="position">1</property>
+                                <property name="name">id</property>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </column-link-detail>
+                    </property>
+                    <property name="allowPushdown">false</property>
+                </column-link>
+            </property>
+            <property name="categories">
+                <category name="Top Topics DS" id="625">
+                    <property name="categoryColumns">
+                        <category-column name="topicid" id="626">
+                            <property name="aliasDataSet">Top Topics/Top Topics</property>
+                            <property name="resultSetColumnName">topicid</property>
+                        </category-column>
+                        <category-column name="period" id="628">
+                            <property name="aliasDataSet">Top Topics/Top Topics</property>
+                            <property name="resultSetColumnName">period</property>
+                        </category-column>
+                        <category-column name="positive" id="629">
+                            <property name="aliasDataSet">Top Topics/Top Topics</property>
+                            <property name="resultSetColumnName">positive</property>
+                        </category-column>
+                        <category-column name="negative" id="630">
+                            <property name="aliasDataSet">Top Topics/Top Topics</property>
+                            <property name="resultSetColumnName">negative</property>
+                        </category-column>
+                        <category-column name="neutral" id="631">
+                            <property name="aliasDataSet">Top Topics/Top Topics</property>
+                            <property name="resultSetColumnName">neutral</property>
+                        </category-column>
+                        <category-column name="topic" id="707">
+                            <property name="aliasDataSet">Top Topics/Topics entries</property>
+                            <property name="resultSetColumnName">value</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+        <linked-data-model name="Topic Breakdown" id="486">
+            <property name="aliasDataSets">
+                <alias-data-set name="Topic Breakdown" id="496">
+                    <property name="originDataSet">Topic Breakdown DS</property>
+                </alias-data-set>
+                <alias-data-set name="Topics entries" id="716">
+                    <property name="originDataSet">Topics entries</property>
+                </alias-data-set>
+            </property>
+            <property name="columnLinks">
+                <column-link id="720">
+                    <property name="leftAliasDataSet">Topic Breakdown/Topic Breakdown</property>
+                    <property name="rightAliasDataSet">Topic Breakdown/Topics entries</property>
+                    <property name="columnLinkDetails">
+                        <column-link-detail id="721">
+                            <structure name="leftColumn">
+                                <property name="position">4</property>
+                                <property name="name">topicId</property>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure name="rightColumn">
+                                <property name="position">1</property>
+                                <property name="name">id</property>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </column-link-detail>
+                    </property>
+                    <property name="allowPushdown">false</property>
+                </column-link>
+            </property>
+            <property name="categories">
+                <category name="Topic Breakdown DS" id="497">
+                    <property name="categoryColumns">
+                        <category-column name="agencyId" id="498">
+                            <property name="aliasDataSet">Topic Breakdown/Topic Breakdown</property>
+                            <property name="resultSetColumnName">agencyId</property>
+                        </category-column>
+                        <category-column name="agency" id="499">
+                            <property name="aliasDataSet">Topic Breakdown/Topic Breakdown</property>
+                            <property name="resultSetColumnName">agency</property>
+                        </category-column>
+                        <category-column name="countrycode" id="500">
+                            <property name="aliasDataSet">Topic Breakdown/Topic Breakdown</property>
+                            <property name="resultSetColumnName">countrycode</property>
+                        </category-column>
+                        <category-column name="topicId" id="501">
+                            <property name="aliasDataSet">Topic Breakdown/Topic Breakdown</property>
+                            <property name="resultSetColumnName">topicId</property>
+                        </category-column>
+                        <category-column name="period" id="504">
+                            <property name="aliasDataSet">Topic Breakdown/Topic Breakdown</property>
+                            <property name="resultSetColumnName">period</property>
+                        </category-column>
+                        <category-column name="positive" id="505">
+                            <property name="aliasDataSet">Topic Breakdown/Topic Breakdown</property>
+                            <property name="resultSetColumnName">positive</property>
+                        </category-column>
+                        <category-column name="negative" id="506">
+                            <property name="aliasDataSet">Topic Breakdown/Topic Breakdown</property>
+                            <property name="resultSetColumnName">negative</property>
+                        </category-column>
+                        <category-column name="neutral" id="507">
+                            <property name="aliasDataSet">Topic Breakdown/Topic Breakdown</property>
+                            <property name="resultSetColumnName">neutral</property>
+                        </category-column>
+                        <category-column name="topic" id="719">
+                            <property name="aliasDataSet">Topic Breakdown/Topics entries</property>
+                            <property name="resultSetColumnName">value</property>
+                        </category-column>
+                        <category-column name="pubdate" id="848">
+                            <property name="aliasDataSet">Topic Breakdown/Topic Breakdown</property>
+                            <property name="resultSetColumnName">pubdatenew</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+        <linked-data-model name="Topic Stats" id="508">
+            <property name="aliasDataSets">
+                <alias-data-set name="Topic Stats" id="615">
+                    <property name="originDataSet">Topic Stats DS</property>
+                </alias-data-set>
+                <alias-data-set name="Topics entries" id="722">
+                    <property name="originDataSet">Topics entries</property>
+                </alias-data-set>
+            </property>
+            <property name="columnLinks">
+                <column-link id="726">
+                    <property name="leftAliasDataSet">Topic Stats/Topic Stats</property>
+                    <property name="rightAliasDataSet">Topic Stats/Topics entries</property>
+                    <property name="columnLinkDetails">
+                        <column-link-detail id="727">
+                            <structure name="leftColumn">
+                                <property name="position">7</property>
+                                <property name="name">topicid2</property>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure name="rightColumn">
+                                <property name="position">1</property>
+                                <property name="name">id</property>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </column-link-detail>
+                    </property>
+                    <property name="allowPushdown">false</property>
+                </column-link>
+            </property>
+            <property name="categories">
+                <category name="Topic Stats DS" id="616">
+                    <property name="categoryColumns">
+                        <category-column name="topicid" id="617">
+                            <property name="aliasDataSet">Topic Stats/Topic Stats</property>
+                            <property name="resultSetColumnName">topicid</property>
+                        </category-column>
+                        <category-column name="description" id="619">
+                            <property name="aliasDataSet">Topic Stats/Topic Stats</property>
+                            <property name="resultSetColumnName">description</property>
+                        </category-column>
+                        <category-column name="Type" id="620">
+                            <property name="aliasDataSet">Topic Stats/Topic Stats</property>
+                            <property name="resultSetColumnName">Type</property>
+                        </category-column>
+                        <category-column name="Period" id="621">
+                            <property name="aliasDataSet">Topic Stats/Topic Stats</property>
+                            <property name="resultSetColumnName">Period</property>
+                        </category-column>
+                        <category-column name="TotalArticles" id="622">
+                            <property name="aliasDataSet">Topic Stats/Topic Stats</property>
+                            <property name="resultSetColumnName">TotalArticles</property>
+                        </category-column>
+                        <category-column name="topic" id="725">
+                            <property name="aliasDataSet">Topic Stats/Topics entries</property>
+                            <property name="resultSetColumnName">value</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+        <linked-data-model name="Topics Candidate" id="369">
+            <property name="aliasDataSets">
+                <alias-data-set name="Topics Candidate DS" id="728">
+                    <property name="originDataSet">Topics Candidate DS</property>
+                </alias-data-set>
+                <alias-data-set name="Topics entries" id="737">
+                    <property name="originDataSet">Topics entries</property>
+                </alias-data-set>
+                <alias-data-set name="Candidates entries" id="741">
+                    <property name="originDataSet">Candidates entries</property>
+                </alias-data-set>
+            </property>
+            <property name="columnLinks">
+                <column-link id="746">
+                    <property name="leftAliasDataSet">Topics Candidate/Topics Candidate DS</property>
+                    <property name="rightAliasDataSet">Topics Candidate/Candidates entries</property>
+                    <property name="columnLinkDetails">
+                        <column-link-detail id="747">
+                            <structure name="leftColumn">
+                                <property name="position">1</property>
+                                <property name="name">candidateid</property>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure name="rightColumn">
+                                <property name="position">1</property>
+                                <property name="name">id</property>
+                                <property name="dataType">integer</property>
+                            </structure>
+                        </column-link-detail>
+                    </property>
+                    <property name="allowPushdown">false</property>
+                </column-link>
+                <column-link id="748">
+                    <property name="leftAliasDataSet">Topics Candidate/Topics Candidate DS</property>
+                    <property name="rightAliasDataSet">Topics Candidate/Topics entries</property>
+                    <property name="columnLinkDetails">
+                        <column-link-detail id="749">
+                            <structure name="leftColumn">
+                                <property name="position">2</property>
+                                <property name="name">topicid</property>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure name="rightColumn">
+                                <property name="position">1</property>
+                                <property name="name">id</property>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </column-link-detail>
+                    </property>
+                    <property name="allowPushdown">false</property>
+                </column-link>
+            </property>
+            <property name="categories">
+                <category name="Topics Candidate DS" id="729">
+                    <property name="categoryColumns">
+                        <category-column name="candidateid" id="730">
+                            <property name="aliasDataSet">Topics Candidate/Topics Candidate DS</property>
+                            <property name="resultSetColumnName">candidateid</property>
+                        </category-column>
+                        <category-column name="candidate" id="744">
+                            <property name="aliasDataSet">Topics Candidate/Candidates entries</property>
+                            <property name="resultSetColumnName">value</property>
+                        </category-column>
+                        <category-column name="brand" id="745">
+                            <property name="aliasDataSet">Topics Candidate/Candidates entries</property>
+                            <property name="resultSetColumnName">brand</property>
+                        </category-column>
+                        <category-column name="topicid" id="731">
+                            <property name="aliasDataSet">Topics Candidate/Topics Candidate DS</property>
+                            <property name="resultSetColumnName">topicid</property>
+                        </category-column>
+                        <category-column name="topic" id="740">
+                            <property name="aliasDataSet">Topics Candidate/Topics entries</property>
+                            <property name="resultSetColumnName">value</property>
+                        </category-column>
+                        <category-column name="period" id="732">
+                            <property name="aliasDataSet">Topics Candidate/Topics Candidate DS</property>
+                            <property name="resultSetColumnName">period</property>
+                        </category-column>
+                        <category-column name="positive" id="733">
+                            <property name="aliasDataSet">Topics Candidate/Topics Candidate DS</property>
+                            <property name="resultSetColumnName">positive</property>
+                        </category-column>
+                        <category-column name="negative" id="734">
+                            <property name="aliasDataSet">Topics Candidate/Topics Candidate DS</property>
+                            <property name="resultSetColumnName">negative</property>
+                        </category-column>
+                        <category-column name="neutral" id="735">
+                            <property name="aliasDataSet">Topics Candidate/Topics Candidate DS</property>
+                            <property name="resultSetColumnName">neutral</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+        <linked-data-model name="Profile Topics" id="787">
+            <property name="aliasDataSets">
+                <alias-data-set name="Topics Candidate DS" id="802">
+                    <property name="originDataSet">Topics Candidate DS</property>
+                </alias-data-set>
+                <alias-data-set name="Topics entries" id="803">
+                    <property name="originDataSet">Topics entries</property>
+                </alias-data-set>
+                <alias-data-set name="Candidates entries" id="804">
+                    <property name="originDataSet">Candidates entries</property>
+                </alias-data-set>
+            </property>
+            <property name="columnLinks">
+                <column-link id="798">
+                    <property name="leftAliasDataSet">Profile Topics/Topics Candidate DS</property>
+                    <property name="rightAliasDataSet">Profile Topics/Candidates entries</property>
+                    <property name="columnLinkDetails">
+                        <column-link-detail id="799">
+                            <structure name="leftColumn">
+                                <property name="position">1</property>
+                                <property name="name">candidateid</property>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure name="rightColumn">
+                                <property name="position">1</property>
+                                <property name="name">id</property>
+                                <property name="dataType">integer</property>
+                            </structure>
+                        </column-link-detail>
+                    </property>
+                    <property name="allowPushdown">false</property>
+                </column-link>
+                <column-link id="800">
+                    <property name="leftAliasDataSet">Profile Topics/Topics Candidate DS</property>
+                    <property name="rightAliasDataSet">Profile Topics/Topics entries</property>
+                    <property name="columnLinkDetails">
+                        <column-link-detail id="801">
+                            <structure name="leftColumn">
+                                <property name="position">2</property>
+                                <property name="name">topicid</property>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure name="rightColumn">
+                                <property name="position">1</property>
+                                <property name="name">id</property>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </column-link-detail>
+                    </property>
+                    <property name="allowPushdown">false</property>
+                </column-link>
+            </property>
+            <property name="categories">
+                <category name="Profile Topics DS" id="788">
+                    <property name="categoryColumns">
+                        <category-column name="candidateid" id="789">
+                            <property name="aliasDataSet">Profile Topics/Topics Candidate DS</property>
+                            <property name="resultSetColumnName">candidateid</property>
+                        </category-column>
+                        <category-column name="candidate" id="790">
+                            <property name="aliasDataSet">Profile Topics/Candidates entries</property>
+                            <property name="resultSetColumnName">value</property>
+                        </category-column>
+                        <category-column name="brand" id="791">
+                            <property name="aliasDataSet">Profile Topics/Candidates entries</property>
+                            <property name="resultSetColumnName">brand</property>
+                        </category-column>
+                        <category-column name="topicid" id="792">
+                            <property name="aliasDataSet">Profile Topics/Topics Candidate DS</property>
+                            <property name="resultSetColumnName">topicid</property>
+                        </category-column>
+                        <category-column name="topic" id="793">
+                            <property name="aliasDataSet">Profile Topics/Topics entries</property>
+                            <property name="resultSetColumnName">value</property>
+                        </category-column>
+                        <category-column name="period" id="794">
+                            <property name="aliasDataSet">Profile Topics/Topics Candidate DS</property>
+                            <property name="resultSetColumnName">period</property>
+                        </category-column>
+                        <category-column name="positive" id="795">
+                            <property name="aliasDataSet">Profile Topics/Topics Candidate DS</property>
+                            <property name="resultSetColumnName">positive</property>
+                        </category-column>
+                        <category-column name="negative" id="796">
+                            <property name="aliasDataSet">Profile Topics/Topics Candidate DS</property>
+                            <property name="resultSetColumnName">negative</property>
+                        </category-column>
+                        <category-column name="neutral" id="797">
+                            <property name="aliasDataSet">Profile Topics/Topics Candidate DS</property>
+                            <property name="resultSetColumnName">neutral</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+        <linked-data-model name="Profile Breakdown" id="17">
+            <property name="aliasDataSets">
+                <alias-data-set name="Candidates entries" id="761">
+                    <property name="originDataSet">Candidates entries</property>
+                </alias-data-set>
+                <alias-data-set name="Profile Breakdown DS" id="805">
+                    <property name="originDataSet">Profile Breakdown DS</property>
+                </alias-data-set>
+            </property>
+            <property name="columnLinks">
+                <column-link id="816">
+                    <property name="leftAliasDataSet">Profile Breakdown/Profile Breakdown DS</property>
+                    <property name="rightAliasDataSet">Profile Breakdown/Candidates entries</property>
+                    <property name="columnLinkDetails">
+                        <column-link-detail id="817">
+                            <structure name="leftColumn">
+                                <property name="position">4</property>
+                                <property name="name">candidateId</property>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure name="rightColumn">
+                                <property name="position">1</property>
+                                <property name="name">id</property>
+                                <property name="dataType">integer</property>
+                            </structure>
+                        </column-link-detail>
+                    </property>
+                    <property name="allowPushdown">false</property>
+                </column-link>
+            </property>
+            <property name="categories">
+                <category name="Profile Breakdown DS" id="751">
+                    <property name="categoryColumns">
+                        <category-column name="agencyId" id="807">
+                            <property name="aliasDataSet">Profile Breakdown/Profile Breakdown DS</property>
+                            <property name="resultSetColumnName">agencyId</property>
+                        </category-column>
+                        <category-column name="agency" id="808">
+                            <property name="aliasDataSet">Profile Breakdown/Profile Breakdown DS</property>
+                            <property name="resultSetColumnName">agency</property>
+                        </category-column>
+                        <category-column name="countrycode" id="809">
+                            <property name="aliasDataSet">Profile Breakdown/Profile Breakdown DS</property>
+                            <property name="resultSetColumnName">countrycode</property>
+                        </category-column>
+                        <category-column name="candidateId" id="810">
+                            <property name="aliasDataSet">Profile Breakdown/Profile Breakdown DS</property>
+                            <property name="resultSetColumnName">candidateId</property>
+                        </category-column>
+                        <category-column name="period" id="812">
+                            <property name="aliasDataSet">Profile Breakdown/Profile Breakdown DS</property>
+                            <property name="resultSetColumnName">period</property>
+                        </category-column>
+                        <category-column name="positive" id="813">
+                            <property name="aliasDataSet">Profile Breakdown/Profile Breakdown DS</property>
+                            <property name="resultSetColumnName">positive</property>
+                        </category-column>
+                        <category-column name="negative" id="814">
+                            <property name="aliasDataSet">Profile Breakdown/Profile Breakdown DS</property>
+                            <property name="resultSetColumnName">negative</property>
+                        </category-column>
+                        <category-column name="neutral" id="815">
+                            <property name="aliasDataSet">Profile Breakdown/Profile Breakdown DS</property>
+                            <property name="resultSetColumnName">neutral</property>
+                        </category-column>
+                        <category-column name="candidate" id="764">
+                            <property name="aliasDataSet">Profile Breakdown/Candidates entries</property>
+                            <property name="resultSetColumnName">value</property>
+                        </category-column>
+                        <category-column name="brand" id="765">
+                            <property name="aliasDataSet">Profile Breakdown/Candidates entries</property>
+                            <property name="resultSetColumnName">brand</property>
+                        </category-column>
+                        <category-column name="pubdate" id="849">
+                            <property name="aliasDataSet">Profile Breakdown/Profile Breakdown DS</property>
+                            <property name="resultSetColumnName">pubdatenew</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+        <linked-data-model name="Profile Stats" id="346">
+            <property name="aliasDataSets">
+                <alias-data-set name="Candidates entries" id="768">
+                    <property name="originDataSet">Candidates entries</property>
+                </alias-data-set>
+                <alias-data-set name="Profile Stats DS" id="818">
+                    <property name="originDataSet">Profile Stats DS</property>
+                </alias-data-set>
+            </property>
+            <property name="columnLinks">
+                <column-link id="824">
+                    <property name="leftAliasDataSet">Profile Stats/Profile Stats DS</property>
+                    <property name="rightAliasDataSet">Profile Stats/Candidates entries</property>
+                    <property name="columnLinkDetails">
+                        <column-link-detail id="825">
+                            <structure name="leftColumn">
+                                <property name="position">1</property>
+                                <property name="name">candidateid</property>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure name="rightColumn">
+                                <property name="position">1</property>
+                                <property name="name">id</property>
+                                <property name="dataType">integer</property>
+                            </structure>
+                        </column-link-detail>
+                    </property>
+                    <property name="allowPushdown">false</property>
+                </column-link>
+            </property>
+            <property name="categories">
+                <category name="Profile Stats DS" id="774">
+                    <property name="categoryColumns">
+                        <category-column name="candidate" id="771">
+                            <property name="aliasDataSet">Profile Stats/Candidates entries</property>
+                            <property name="resultSetColumnName">value</property>
+                        </category-column>
+                        <category-column name="brand" id="772">
+                            <property name="aliasDataSet">Profile Stats/Candidates entries</property>
+                            <property name="resultSetColumnName">brand</property>
+                        </category-column>
+                        <category-column name="candidateid" id="820">
+                            <property name="aliasDataSet">Profile Stats/Profile Stats DS</property>
+                            <property name="resultSetColumnName">candidateid</property>
+                        </category-column>
+                        <category-column name="Type" id="821">
+                            <property name="aliasDataSet">Profile Stats/Profile Stats DS</property>
+                            <property name="resultSetColumnName">Type</property>
+                        </category-column>
+                        <category-column name="Period" id="822">
+                            <property name="aliasDataSet">Profile Stats/Profile Stats DS</property>
+                            <property name="resultSetColumnName">Period</property>
+                        </category-column>
+                        <category-column name="TotalArticles" id="823">
+                            <property name="aliasDataSet">Profile Stats/Profile Stats DS</property>
+                            <property name="resultSetColumnName">TotalArticles</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+        <linked-data-model name="Profile Comparasion Topics" id="190">
+            <property name="aliasDataSets">
+                <alias-data-set name="Profile Comparasion Topics DS" id="826">
+                    <property name="originDataSet">Profile Comparasion Topics DS</property>
+                </alias-data-set>
+                <alias-data-set name="Candidates entries" id="835">
+                    <property name="originDataSet">Candidates entries</property>
+                </alias-data-set>
+                <alias-data-set name="Topics entries" id="840">
+                    <property name="originDataSet">Topics entries</property>
+                </alias-data-set>
+            </property>
+            <property name="columnLinks">
+                <column-link id="844">
+                    <property name="leftAliasDataSet">Profile Comparasion Topics/Topics entries</property>
+                    <property name="rightAliasDataSet">Profile Comparasion Topics/Profile Comparasion Topics DS</property>
+                    <property name="columnLinkDetails">
+                        <column-link-detail id="845">
+                            <structure name="leftColumn">
+                                <property name="position">1</property>
+                                <property name="name">id</property>
+                                <property name="dataType">string</property>
+                            </structure>
+                            <structure name="rightColumn">
+                                <property name="position">2</property>
+                                <property name="name">topicid</property>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </column-link-detail>
+                    </property>
+                    <property name="allowPushdown">false</property>
+                </column-link>
+                <column-link id="846">
+                    <property name="leftAliasDataSet">Profile Comparasion Topics/Profile Comparasion Topics DS</property>
+                    <property name="rightAliasDataSet">Profile Comparasion Topics/Candidates entries</property>
+                    <property name="columnLinkDetails">
+                        <column-link-detail id="847">
+                            <structure name="leftColumn">
+                                <property name="position">1</property>
+                                <property name="name">candidateid</property>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure name="rightColumn">
+                                <property name="position">1</property>
+                                <property name="name">id</property>
+                                <property name="dataType">integer</property>
+                            </structure>
+                        </column-link-detail>
+                    </property>
+                    <property name="allowPushdown">false</property>
+                </column-link>
+            </property>
+            <property name="categories">
+                <category name="Profile Comparasion Topics DS" id="827">
+                    <property name="categoryColumns">
+                        <category-column name="candidate" id="838">
+                            <property name="aliasDataSet">Profile Comparasion Topics/Candidates entries</property>
+                            <property name="resultSetColumnName">value</property>
+                        </category-column>
+                        <category-column name="brand" id="839">
+                            <property name="aliasDataSet">Profile Comparasion Topics/Candidates entries</property>
+                            <property name="resultSetColumnName">brand</property>
+                        </category-column>
+                        <category-column name="candidateid" id="828">
+                            <property name="aliasDataSet">Profile Comparasion Topics/Profile Comparasion Topics DS</property>
+                            <property name="resultSetColumnName">candidateid</property>
+                        </category-column>
+                        <category-column name="topicid" id="830">
+                            <property name="aliasDataSet">Profile Comparasion Topics/Profile Comparasion Topics DS</property>
+                            <property name="resultSetColumnName">topicid</property>
+                        </category-column>
+                        <category-column name="topic" id="843">
+                            <property name="aliasDataSet">Profile Comparasion Topics/Topics entries</property>
+                            <property name="resultSetColumnName">value</property>
+                        </category-column>
+                        <category-column name="Period" id="831">
+                            <property name="aliasDataSet">Profile Comparasion Topics/Profile Comparasion Topics DS</property>
+                            <property name="resultSetColumnName">Period</property>
+                        </category-column>
+                        <category-column name="positive" id="832">
+                            <property name="aliasDataSet">Profile Comparasion Topics/Profile Comparasion Topics DS</property>
+                            <property name="resultSetColumnName">positive</property>
+                        </category-column>
+                        <category-column name="negative" id="833">
+                            <property name="aliasDataSet">Profile Comparasion Topics/Profile Comparasion Topics DS</property>
+                            <property name="resultSetColumnName">negative</property>
+                        </category-column>
+                        <category-column name="neutral" id="834">
+                            <property name="aliasDataSet">Profile Comparasion Topics/Profile Comparasion Topics DS</property>
+                            <property name="resultSetColumnName">neutral</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+    </property>
+</datamart>

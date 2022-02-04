@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.11.0.v202108101920</property>
+    <property name="units">in</property>
+    <method name="beforeFactory"><![CDATA[importPackage(Packages.org.eclipse.birt.chart.model.data.impl);
+importPackage(Packages.org.eclipse.birt.chart.model.component.impl);
+importPackage(Packages.org.eclipse.birt.chart.model.type.impl);
+importPackage(Packages.org.eclipse.birt.chart.model.attribute);
+ 
+var chart = reportContext.getDesignHandle().findElement("mainChart");
+var chartInstance = chart.getReportItem().getProperty("chart.instance" );
+
+var period = params["pPeriod"].value;
+ 
+var xAxis = chartInstance.getBaseAxes()[0];
+if (xAxis.getType() == AxisType.DATE_TIME_LITERAL) {
+	var xGrouping = xAxis.getSeriesDefinitions().get(0).getGrouping();
+    
+	if (period <= 30 &amp;&amp; period != 0) {
+		xGrouping.setGroupingUnit(GroupingUnitType.DAYS_LITERAL);
+	} else {
+		xGrouping.setGroupingUnit(GroupingUnitType.WEEKS_LITERAL);
+	}
+
+	xGrouping.setGroupingInterval(1);
+}
+
+
+if( params["pMediaId"].value == 0 ){
+	reportContext.getDesignHandle().findElement("myTable").getListProperty("filter").get(1).setExpr("1");
+	reportContext.getDesignHandle().findElement("myTable").getListProperty("filter").get(1).setValue1("1");
+}
+]]></method>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">fixed layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="pSentiment" id="149">
+            <property name="valueType">static</property>
+            <property name="isRequired">false</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">ALL</value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">ALL</property>
+                </structure>
+                <structure>
+                    <property name="value">NEG</property>
+                </structure>
+                <structure>
+                    <property name="value">POS</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="pCandidateId1" id="155">
+            <property name="valueType">static</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">1</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="pCandidateId2" id="180">
+            <property name="valueType">static</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="pPeriod" id="1370">
+            <text-property name="promptText">Period</text-property>
+            <property name="valueType">static</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">7</value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">3</property>
+                    <property name="label">3</property>
+                </structure>
+                <structure>
+                    <property name="value">7</property>
+                    <property name="label">7</property>
+                </structure>
+                <structure>
+                    <property name="value">15</property>
+                    <property name="label">15</property>
+                </structure>
+                <structure>
+                    <property name="value">30</property>
+                    <property name="label">30</property>
+                </structure>
+                <structure>
+                    <property name="value">60</property>
+                    <property name="label">60</property>
+                </structure>
+                <structure>
+                    <property name="value">90</property>
+                    <property name="label">90</property>
+                </structure>
+                <structure>
+                    <property name="value">0</property>
+                    <property name="label">All</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="pMediaId" id="313">
+            <property name="valueType">static</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">0</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <data-mart-data-source name="Techtracker Data Source" id="319">
+            <property name="datamartURL">Data Objects/Techtraker</property>
+            <property name="accessType">latest</property>
+        </data-mart-data-source>
+    </data-sources>
+    <property name="linkedDataModels">
+        <data-mart-linked-data-model name="Profile Breakdown" id="1371">
+            <property name="dataSource">Techtracker Data Source</property>
+            <property name="dataObject">Profile Breakdown</property>
+        </data-mart-linked-data-model>
+    </property>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">custom</property>
+            <property name="orientation">landscape</property>
+            <property name="height">12in</property>
+            <property name="width">11in</property>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <table name="myTable" id="267">
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">agencyId</property>
+                    <text-property name="displayName">agencyId</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["agencyId"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">agency</property>
+                    <text-property name="displayName">agency</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["agency"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">countrycode</property>
+                    <text-property name="displayName">countrycode</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["countrycode"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">candidateId</property>
+                    <text-property name="displayName">candidateId</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["candidateId"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">candidate</property>
+                    <text-property name="displayName">candidate</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["candidate"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">pubdate</property>
+                    <text-property name="displayName">pubdate</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["pubdate"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">period</property>
+                    <text-property name="displayName">period</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["period"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">positive</property>
+                    <text-property name="displayName">positive</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["positive"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">negative</property>
+                    <text-property name="displayName">negative</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["negative"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">neutral</property>
+                    <text-property name="displayName">neutral</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["neutral"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Total Mentions</property>
+                    <expression name="expression" type="javascript">if (params["pSentiment"].value == "POS")
+	dataSetRow["positive"];
+else if (params["pSentiment"].value == "NEG")
+	dataSetRow["negative"];
+else
+	dataSetRow["positive"] + dataSetRow["negative"] + dataSetRow["neutral"];</expression>
+                    <property name="dataType">integer</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">brand</property>
+                    <text-property name="displayName">brand</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["brand"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <property name="linkedDataModel">Profile Breakdown</property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">in</property>
+                    <expression name="expr" type="javascript">row["candidateId"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="javascript">params["pCandidateId1"].value</value>
+                        <value type="javascript">params["pCandidateId2"].value</value>
+                    </simple-property-list>
+                    <property name="updateAggregation">true</property>
+                </structure>
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["agencyId"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="javascript">params["pMediaId"].value</value>
+                    </simple-property-list>
+                    <property name="updateAggregation">true</property>
+                </structure>
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">row["period"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="javascript">params["pPeriod"].value</value>
+                    </simple-property-list>
+                    <property name="updateAggregation">true</property>
+                </structure>
+            </list-property>
+            <column id="306"/>
+            <column id="307"/>
+            <column id="308"/>
+            <column id="309"/>
+            <column id="310"/>
+            <column id="311"/>
+            <column id="312"/>
+            <detail>
+                <row id="283">
+                    <method name="onCreate"><![CDATA[if (this.getRowData().getColumnValue("candidateId") == params["pCandidateId1"].value) {
+	vars["CandidateParty1"] = this.getRowData().getColumnValue("brand");
+	vars["CandidateName1"] = this.getRowData().getColumnValue("candidate");
+} else {
+	vars["CandidateParty2"] = this.getRowData().getColumnValue("brand");
+	vars["CandidateName2"] = this.getRowData().getColumnValue("candidate");
+}	
+]]></method>
+                    <property name="height">0.78125in</property>
+                    <list-property name="visibility">
+                        <structure>
+                            <property name="format">all</property>
+                            <expression name="valueExpr" type="javascript">true</expression>
+                        </structure>
+                    </list-property>
+                    <cell id="284">
+                        <property name="colSpan">7</property>
+                        <property name="rowSpan">1</property>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="298">
+                    <cell id="299">
+                        <property name="colSpan">7</property>
+                        <property name="rowSpan">1</property>
+                        <extended-item extensionName="Chart" name="mainChart" id="179">
+                            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay" reverseCategory="false">
+  <block>
+   <children _type="TitleBlock" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <background _body=",255,255,255,255"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,752.25,376.125"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+   <background _body=",255,234,234,234"/>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.glass.style" value="false"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.scroll" value="false"/>
+  <extendedProperties name="jschart.animation" value="false"/>
+  <extendedProperties name="jschart.client.script" value="beforeGeneration: function (options) {&#13;&#10;    options.xAxis.minPadding = 0;&#13;&#10;    options.xAxis.maxPadding = 0;&#13;&#10;    options.xAxis.labels.align = &quot;center&quot;;&#13;&#10;    options.xAxis.startOfWeek = 0;&#13;&#10;console.log (options.series);&#13;&#10;    if (this.getReportVariable(&quot;CandidateParty1&quot;) == &quot;Apple&quot;)&#13;&#10;        options.series[0].color = &quot;#ea3343&quot;;&#13;&#10;    else if (this.getReportVariable(&quot;CandidateParty1&quot;) == &quot;Samsung&quot;)&#13;&#10;        options.series[0].color = &quot;#4672da&quot;;&#13;&#10;    else if (this.getReportVariable(&quot;CandidateParty1&quot;) == &quot;LG&quot;)&#13;&#10;        options.series[0].color = &quot;#20d2ff&quot;;&#13;&#10;    else if (this.getReportVariable(&quot;CandidateParty1&quot;) == &quot;Google&quot;)&#13;&#10;        options.series[0].color = &quot;#92d050&quot;;&#13;&#10;    else if (this.getReportVariable(&quot;CandidateParty1&quot;) == &quot;Sony&quot;)&#13;&#10;        options.series[0].color = &quot;#d83e88&quot;;&#13;&#10;    else if (this.getReportVariable(&quot;CandidateParty1&quot;) == &quot;Nokia&quot;)&#13;&#10;        options.series[0].color = &quot;#ff9320&quot;;&#13;&#10;    else if (this.getReportVariable(&quot;CandidateParty1&quot;) == &quot;Blackberry&quot;)&#13;&#10;        options.series[0].color = &quot;#a23fe0&quot;;&#13;&#10;    else if (this.getReportVariable(&quot;CandidateParty1&quot;) == &quot;Motorola&quot;)&#13;&#10;        options.series[0].color = &quot;#ffcc18&quot;;  &#13;&#10;    else&#13;&#10;        options.series[0].color = &quot;#FFFFFF&quot;;&#13;&#10;&#13;&#10;    if (this.getReportVariable(&quot;CandidateParty2&quot;) == &quot;Apple&quot;)&#13;&#10;        options.series[1].color = &quot;#ea3343&quot;;&#13;&#10;    else if (this.getReportVariable(&quot;CandidateParty2&quot;) == &quot;Samsung&quot;)&#13;&#10;        options.series[1].color = &quot;#4672da&quot;;&#13;&#10;    else if (this.getReportVariable(&quot;CandidateParty2&quot;) == &quot;LG&quot;)&#13;&#10;        options.series[1].color = &quot;#20d2ff&quot;;&#13;&#10;    else if (this.getReportVariable(&quot;CandidateParty2&quot;) == &quot;Google&quot;)&#13;&#10;        options.series[1].color = &quot;#92d050&quot;;&#13;&#10;    else if (this.getReportVariable(&quot;CandidateParty2&quot;) == &quot;Sony&quot;)&#13;&#10;        options.series[1].color = &quot;#d83e88&quot;;&#13;&#10;    else if (this.getReportVariable(&quot;CandidateParty2&quot;) == &quot;Nokia&quot;)&#13;&#10;        options.series[1].color = &quot;#ff9320&quot;;&#13;&#10;    else if (this.getReportVariable(&quot;CandidateParty2&quot;) == &quot;Blackberry&quot;)&#13;&#10;        options.series[1].color = &quot;#a23fe0&quot;;&#13;&#10;    else if (this.getReportVariable(&quot;CandidateParty2&quot;) == &quot;Motorola&quot;)&#13;&#10;        options.series[1].color = &quot;#ffcc18&quot;; &#13;&#10;    else&#13;&#10;        options.series[1].color = &quot;#FFFFFF&quot;;&#13;&#10;&#13;&#10;    if (this.getReportVariable(&quot;CandidateParty1&quot;) == this.getReportVariable(&quot;CandidateParty2&quot;))&#13;&#10;        options.series[1].dashStyle = &quot;Dash&quot;;&#13;&#10;&#13;&#10;    options.series[0].name = this.getReportVariable(&quot;CandidateName1&quot;);&#13;&#10;    options.series[1].name = this.getReportVariable(&quot;CandidateName2&quot;);&#13;&#10;&#13;&#10;    var tooltipFormat = &quot;&quot;;&#13;&#10;    var period = this.getReportParameter(&quot;pPeriod&quot;);&#13;&#10;    if (period &lt;= 30 &amp;&amp; period != 0) {&#13;&#10;        tooltipFormat = &quot;%b %d&quot;;&#13;&#10;    } else {&#13;&#10;        tooltipFormat = &quot;Week of: %b %d&quot;;&#13;&#10;    }&#13;&#10;&#13;&#10;    options.tooltip = {&#13;&#10;        shared: true,&#13;&#10;        formatter: function () {&#13;&#10;            var key = actuate.report.HTML5Chart.Highcharts.dateFormat(tooltipFormat, this.points[0].key);&#13;&#10;            var tooltipMarkup = this.points.length ? &quot;&lt;span style=\&quot;font-size: 12px\&quot;&gt;&quot; + key + &quot;&lt;/span&gt;&lt;br/&gt;&quot; : &quot;&quot;;&#13;&#10;&#13;&#10;            if (this.points[0].y &gt; this.points[1].y) {&#13;&#10;                tooltipMarkup += &quot;&lt;span style=\&quot;color:&quot; + this.points[0].series.color + &quot;\&quot;&gt;&quot; + this.points[0].series.name + &quot;&lt;/span&gt;: &lt;b&gt;&quot; + this.points[0].y + &quot; &lt;/b&gt;&lt;br/&gt;&quot;;&#13;&#10;                tooltipMarkup += &quot;&lt;span style=\&quot;color:&quot; + this.points[1].series.color + &quot;\&quot;&gt;&quot; + this.points[1].series.name + &quot;&lt;/span&gt;: &lt;b&gt;&quot; + this.points[1].y + &quot; &lt;/b&gt;&lt;br/&gt;&quot;;&#13;&#10;            } else {&#13;&#10;                tooltipMarkup += &quot;&lt;span style=\&quot;color:&quot; + this.points[1].series.color + &quot;\&quot;&gt;&quot; + this.points[1].series.name + &quot;&lt;/span&gt;: &lt;b&gt;&quot; + this.points[1].y + &quot; &lt;/b&gt;&lt;br/&gt;&quot;;&#13;&#10;                tooltipMarkup += &quot;&lt;span style=\&quot;color:&quot; + this.points[0].series.color + &quot;\&quot;&gt;&quot; + this.points[0].series.name + &quot;&lt;/span&gt;: &lt;b&gt;&quot; + this.points[0].y + &quot; &lt;/b&gt;&lt;br/&gt;&quot;;&#13;&#10;            }&#13;&#10;&#13;&#10;            return tooltipMarkup;&#13;&#10;        }&#13;&#10;    };&#13;&#10;&#13;&#10;},"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
+   <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
+   <orthogonalSampleData dataSetRepresentation="12.0,8.0,24.0,16.0,20.0" seriesDefinitionIndex="1"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3" categoryAxis="false">
+   <title visible="false">
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title visible="false">
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,0,0,255"/>
+      <entries _body=",255,255,0,0"/>
+      <entries _body=",255,232,172,57"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Product1" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="if (row[&quot;candidateId&quot;] == params[&quot;pCandidateId1&quot;].value)&#13;&#10; row[&quot;Total Mentions&quot;];&#13;&#10;else&#13;&#10; 0;">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes thickness="3" visible="true">
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,255,0,0"/>
+      <entries _body=",255,232,172,57"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,0,0,255"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Product2" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="if (row[&quot;candidateId&quot;] == params[&quot;pCandidateId2&quot;].value)&#13;&#10; row[&quot;Total Mentions&quot;];&#13;&#10;else&#13;&#10; 0;">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes thickness="3" visible="true">
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes visible="false">
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes visible="false">
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes visible="false">
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes visible="false">
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes visible="false">
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,0,0,255"/>
+     <entries _body=",255,255,0,0"/>
+     <entries _body=",255,232,172,57"/>
+     <entries _body=",255,128,255,128"/>
+     <entries _body=",255,64,128,128"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,170,85,85"/>
+     <entries _body=",255,128,128,0"/>
+     <entries _body=",255,192,192,192"/>
+     <entries _body=",255,255,255,128"/>
+     <entries _body=",255,128,192,128"/>
+     <entries _body=",255,7,146,94"/>
+     <entries _body=",255,0,128,255"/>
+     <entries _body=",255,255,128,192"/>
+     <entries _body=",255,0,255,255"/>
+     <entries _body=",255,255,128,128"/>
+     <entries _body=",255,0,128,192"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,255,0,255"/>
+     <entries _body=",255,128,64,64"/>
+     <entries _body=",255,255,128,64"/>
+     <entries _body=",255,80,240,120"/>
+     <entries _body=",255,0,64,128"/>
+     <entries _body=",255,128,0,64"/>
+     <entries _body=",255,255,0,128"/>
+     <entries _body=",255,128,128,64"/>
+     <entries _body=",255,128,128,128"/>
+     <entries _body=",255,255,128,255"/>
+     <entries _body=",255,0,64,0"/>
+     <entries _body=",255,0,0,0"/>
+     <entries _body=",255,255,255,255"/>
+     <entries _body=",255,255,128,0"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;pubdate&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupType="1"/>
+    <sortKey/>
+   </seriesDefinitions>
+   <lineAttributes visible="false">
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <formatSpecifier _type="JavaDateFormatSpecifier" pattern="MMM d"/>
+   <majorGrid>
+    <lineAttributes visible="false">
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes visible="false">
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes visible="false">
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+                            <property name="outputFormat">JS</property>
+                            <property name="inheritColumns">true</property>
+                            <property name="fontFamily">"Lato"</property>
+                            <property name="color">#636363</property>
+                            <property name="height">3.4583333333333335in</property>
+                            <property name="width">9.708in</property>
+                        </extended-item>
+                    </cell>
+                </row>
+            </footer>
+        </table>
+    </body>
+    <property name="pageVariables">
+        <variable-element name="CandidateParty1">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="CandidateParty2">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="CandidateName1">
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="CandidateName2">
+            <property name="type">report</property>
+        </variable-element>
+    </property>
+</report>

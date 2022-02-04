@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Tech Tracker '22</title>
+
+    <!-- Web Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57"        href="img/favicon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60"        href="img/favicon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72"        href="img/favicon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76"        href="img/favicon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114"      href="img/favicon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120"      href="img/favicon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144"      href="img/favicon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152"      href="img/favicon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180"      href="img/favicon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32"   href="img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96"   href="img/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16"   href="img/favicon-16x16.png">
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:title" content="Tech Tracker '22"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="Tech Tracker - AI Brand Analysis of Online Tech Reviews and Social Opinions"/>
+    <meta property="og:url" content="http://techtracker.eastus.cloudapp.azure.com/techtracker"/>
+    <meta property="og:image" content="http://techtracker.eastus.cloudapp.azure.com/techtracker/img/tech-tracker-logo-large.png">
+
+    <!-- Scripts-->
+    <script type="text/javascript" src="/iportal/jsapi"></script>    
+    <!-- Already included in JSAPI
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    Scripts-->
+    <script type="text/javascript" src="js/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="js/featherlight.min.js"></script>
+    <script type="text/javascript" src="js/functions.js?v=1.2.1beta"></script>
+    <script type="text/javascript" src="js/techtracker-viewers.js?v=1.2.1beta"></script>
+    <script>
+        $(document).ready(function () {
+
+            var lid = getURLParameter("lid");
+            var lCandidate = getArrayObjectById(candidates_array, lid);
+            var rid = getURLParameter("rid");
+            var rCandidate = getArrayObjectById(candidates_array, rid);
+
+            $("#leftCandidateName").text(lCandidate.name);
+            $("#rightCandidateName").text(rCandidate.name);
+
+            var $legend = $("#mediaLegend");
+            $legend.find(".imgL").attr("src", "img/" + lCandidate.id + "-small.png").attr("alt", lCandidate.name).attr("title", lCandidate.name);
+            $legend.find(".lineL").addClass(lCandidate.party.toLowerCase() + "Line");
+            $legend.find(".imgR").attr("src", "img/" + rCandidate.id + "-small.png").attr("alt", rCandidate.name).attr("title", rCandidate.name);
+            $legend.find(".lineR").addClass(rCandidate.party.toLowerCase() + "Line");
+            if (lCandidate.party == rCandidate.party)
+                $legend.find(".lineR").addClass("dashed");
+
+            var candidates_sorted = filterAndSortArray(candidates_array);
+
+            var midPoint = parseInt((candidates_sorted.length / 2) - 0.5);
+            var li;
+            var ulList = "<ul>";
+            $.each(candidates_sorted, function (i, c) {
+                li = "<li><a data-lid=\"" + c.id + "\" href=\"#\">";
+                li += "<img src=\"img/" + c.id + "-small.png\"/>";
+                li += c.name;
+                li += "</a></li>";
+                ulList += li;
+                if (i == midPoint)
+                    ulList += "</ul><ul>";
+            });
+            ulList += "</ul>";
+            var $leftCandidateMenuContainer = $("#leftCandidateMenuContainer");
+            $leftCandidateMenuContainer.html(ulList);
+            $leftCandidateMenuContainer.find("a").click(function(e) {
+                var newlid = $(this).data("lid");
+                var pid = $("#periodSelect").val();
+                e.preventDefault();
+                window.location = "compare.html?lid=" + newlid + "&rid=" + rid + "&pid=" + pid;
+            });
+
+            ulList = "<ul>";
+            $.each(candidates_sorted, function (i, c) {
+                li = "<li><a data-rid=\"" + c.id + "\" href=\"#\">";
+                li += "<img src=\"img/" + c.id + "-small.png\"/>";
+                li += c.name;
+                li += "</a></li>";
+                ulList += li;
+                if (i == midPoint)
+                    ulList += "</ul><ul>";
+            });
+            ulList += "</ul>";
+            var $rightCandidateMenuContainer = $("#rightCandidateMenuContainer");
+            $rightCandidateMenuContainer.html(ulList);
+            $rightCandidateMenuContainer.find("a").click(function(e) {
+                var newrid = $(this).data("rid");
+                var pid = $("#periodSelect").val();
+                e.preventDefault();
+                window.location = "compare.html?lid=" + lid + "&rid=" + newrid + "&pid=" + pid;
+            });
+
+            var media_sorted = filterAndSortArray(media_array);
+            var optionList = "<option value=\"0\" selected>All Media Sources</option>";
+            $.each(media_sorted, function (i, m) {
+                optionList += "<option value=\"" + m.id + "\">" + m.name + "</option>";
+            });
+            $("#pMediaId").html(optionList);
+
+            var viewerData = [];
+            viewerData.push({id: "candidateComparisonStats", viewName: "Compare Stats.rptdesign", height: 423, filters: {pCandidateId1: lid, pCandidateId2: rid, pPeriod: pid}, sets: ["period"]});
+            viewerData.push({id: "candidateComparisonTopics", viewName: "Compare Topics.rptdesign", height: 570, filters: {pCandidateId1: lid, pCandidateId2: rid, pPeriod: pid}, sets: ["period"]});
+            viewerData.push({id: "candidateComparisonMedia", viewName: "Compare Media.rptdesign", height: 345, filters: {pCandidateId1: lid, pCandidateId2: rid, pPeriod: pid}, sets: ["candidateCompareMedia", "period"]});
+            EV.initialize(viewerData);
+        });
+    </script>
+
+    <!-- Share This -->
+    <script type="text/javascript">var switchTo5x = true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "b9262918-17a9-4cf2-a1be-bd5d5f73fb6f", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css?v=1.2.1beta" type="text/css"/>
+    <link rel="stylesheet" href="css/featherlight.css?v=1.2.1beta" type="text/css"/>
+
+</head>
+
+
+<body class="profile interior">
+
+<!-- Google Tag Manager -->
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-F9X6"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>(function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+        'gtm.start': new Date().getTime(), event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src =
+            '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-F9X6');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Candidate / Topic Overlay Menu -->
+<div id="leftCandidateMenu" class="candidateMenu">
+    <!-- Close Button -->
+    <a href="#" class="overlayCloseButton">
+        <span></span>
+        <span></span>
+    </a>
+
+    <div id="leftCandidateMenuContainer" class="menuContainer">
+    </div>
+</div>
+<div id="rightCandidateMenu" class="candidateMenu">
+    <!-- Close Button -->
+    <a href="#" class="overlayCloseButton">
+        <span></span>
+        <span></span>
+    </a>
+
+    <div id="rightCandidateMenuContainer" class="menuContainer">
+    </div>
+</div>
+<!-- End Overlay Menu -->
+
+<!-- Sticky Header -->
+<div id="menuHeader">
+	
+	<!-- Header Wrapper -->
+    <div class="headerWrapper">
+	    
+	    <!-- Menu -->
+        <ul id="menu">
+            <li><a href="main.html" class="home"></a></li>
+            <li>
+                <a  class="share">Share</a>
+					<span id="shareIcons">
+						<a href="#" class="shareIcon twitter"></a>
+						<a href="#" class="shareIcon facebook"></a>
+						<a href="#" class="shareIcon linkedin"></a>
+						<a href="#" class="shareIcon email"></a>
+					</span>
+            </li>
+        </ul><!-- End Menu -->
+        
+        <!-- ET16 Logo -->
+        <img src="img/MagellanWtWd.png" alt="2022 Tech Tracker" width="117" height="25"/>&nbsp;<h4>Analysis Of Online Tech Reviews and Social Opinions</h4>
+        
+    </div><!-- End Header Wrapper -->
+    
+    <!-- Period Select -->
+    <div id="periodSelectContainer">
+        <label for="periodSelect">You are viewing data from the:</label>
+        <div class="select-periodSelect-style">
+                <select id="periodSelect"></select>
+          </div>
+    </div>
+    
+</div>
+
+<!-- Wrapper to center all content -->
+<div class="contentWrapper">
+
+    <!-- Front Door -->
+    <div id="profileFrontdoor">
+
+        <!-- Candidate Left -->
+        <div style="float: left; margin-right:60px; text-align: center; width: 460px;">
+            <h1 data-menu="leftCandidateMenu" id="leftCandidateName">Left Candidate</h1>
+        </div>
+
+        <!-- Candidate Right -->
+        <div style="float: left; text-align: center; width: 460px;">
+            <h1 data-menu="rightCandidateMenu" id="rightCandidateName">Right Candidate</h1>
+        </div>
+
+    </div>
+
+    <!-- Candidates Compare -->
+    <div class="compareAnalyticsContainer" id="candidateComparisonStats"></div>
+
+    <!-- Top Topics -->
+    <div id="candidateComparasionTopicSection">
+        <h2>Topic Comparison</h2><br/>
+
+        <h3>by media mentions</h3>
+
+        <div class="compareAnalyticsContainer">
+            <div id="candidateComparisonTopics"></div>
+
+            <!-- SHOW MORE -->
+            <a href="#" class="showMoreButtonGrey" data-def="candidateComparisonTopics">SHOW MORE</a>
+        </div>
+    </div>
+
+    <!-- Media Breakdown -->
+    <div id="candidateComparisonMediaSection" class="module">
+        <h2>Media Mentions</h2>
+
+        <h3>by media source</h3>
+
+        <!-- Legend -->
+        <div id="mediaLegend">
+        	<img src="img/1-small.png" class="imgL"/>
+        	<img src="img/1-small.png" class="imgR"/>
+            <span class="lineL"></span>
+            <span class="lineR"></span>
+        </div>
+
+        <!-- Filter Button -->
+        <a id="candidateComparisonMediaFilter" href="#" class="filterButton">
+            <span class="textLabel">FILTER</span>
+				<span class="filterIcon">
+					<span class="line"></span>
+					<span class="circle"></span>
+					<span class="line"></span>
+					<span class="circle"></span>
+					<span class="line"></span>
+					<span class="circle"></span>
+				</span>
+        </a>
+
+        <!-- Filter Pane -->
+        <div class="filterPane">
+            <form data-set="candidateCompareMedia">
+                <h5>Filters</h5>
+
+                <h6>Media Coverage</h6>
+
+                <div class="select-filter-style">
+                    <label for="pMediaId"></label>
+                    <select id="pMediaId" name="pMediaId"></select>
+                </div>
+            </form>
+        </div>
+        <!-- End Filter Pane -->
+
+        <!-- Analytic Container -->
+        <div id="candidateComparisonMedia"></div>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+
+        <!-- Left -->
+        <div id="copyright">
+            Copyright &copy; 2019 Open Text SA or Open Text ULC (in Canada). All rights reserved.
+        </div>
+
+        <!-- Powered by OpenText -->
+        <div id="poweredBy">
+            <a href="http://www.opentext.com" target="_blank"><img src="img/powered-by-opentext.png" alt="Powered by OpenText" width="183" height="39"/></a>
+        </div>
+
+    </div>
+
+</div>
+<!-- End wrapper -->
+
+</body>
+
+</html>

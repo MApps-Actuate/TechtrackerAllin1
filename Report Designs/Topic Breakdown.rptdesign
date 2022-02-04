@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.11.0.v202108101920</property>
+    <property name="units">in</property>
+    <method name="beforeFactory"><![CDATA[importPackage(Packages.org.eclipse.birt.chart.model.data.impl);
+importPackage(Packages.org.eclipse.birt.chart.model.component.impl);
+importPackage(Packages.org.eclipse.birt.chart.model.type.impl);
+importPackage(Packages.org.eclipse.birt.chart.model.attribute);
+ 
+var chart = reportContext.getDesignHandle().findElement("mainChart");
+var chartInstance = chart.getReportItem().getProperty("chart.instance" );
+var underChart = reportContext.getDesignHandle().findElement("underChart");
+var underChartInstance = underChart.getReportItem().getProperty("chart.instance" );
+
+var period = params["pPeriod"].value;
+ 
+var xAxis = chartInstance.getBaseAxes()[0];
+var uxAxis = underChartInstance.getBaseAxes()[0];
+if (xAxis.getType() == AxisType.DATE_TIME_LITERAL) {
+	var xGrouping = xAxis.getSeriesDefinitions().get(0).getGrouping();
+	var uxGrouping = uxAxis.getSeriesDefinitions().get(0).getGrouping();
+    
+	if (period <= 30 &amp;&amp; period != 0) {
+		xGrouping.setGroupingUnit(GroupingUnitType.DAYS_LITERAL);
+		uxGrouping.setGroupingUnit(GroupingUnitType.DAYS_LITERAL);
+	} else {
+		xGrouping.setGroupingUnit(GroupingUnitType.WEEKS_LITERAL);
+		uxGrouping.setGroupingUnit(GroupingUnitType.WEEKS_LITERAL);
+	}
+
+	xGrouping.setGroupingInterval(1);
+	uxGrouping.setGroupingInterval(1);
+}
+
+
+if( params["pMediaId"].value == 0 ){
+	chart.getListProperty("filter").get(0).setExpr("1");
+	chart.getListProperty("filter").get(0).setValue1("1");
+	underChart.getListProperty("filter").get(0).setExpr("1");
+	underChart.getListProperty("filter").get(0).setValue1("1");
+}
+]]></method>
+    <property name="theme">Tecktracker.Techtracker</property>
+    <property name="layoutPreference">fixed layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">Report Libraries/Tecktracker.rptlibrary</property>
+            <property name="namespace">Tecktracker</property>
+        </structure>
+    </list-property>
+    <parameters>
+        <scalar-parameter name="pTopicId" id="39">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">6</value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">6</property>
+                    <property name="label">Campaign Finance</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="pMediaId" id="40">
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">0</value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">1</property>
+                </structure>
+                <structure>
+                    <property name="value">2</property>
+                </structure>
+                <structure>
+                    <property name="value">3</property>
+                </structure>
+                <structure>
+                    <property name="value">4</property>
+                </structure>
+                <structure>
+                    <property name="value">5</property>
+                </structure>
+                <structure>
+                    <property name="value">6</property>
+                </structure>
+                <structure>
+                    <property name="value">7</property>
+                </structure>
+                <structure>
+                    <property name="value">8</property>
+                </structure>
+                <structure>
+                    <property name="value">9</property>
+                </structure>
+                <structure>
+                    <property name="value">10</property>
+                </structure>
+                <structure>
+                    <property name="value">11</property>
+                </structure>
+                <structure>
+                    <property name="value">12</property>
+                </structure>
+                <structure>
+                    <property name="value">13</property>
+                </structure>
+                <structure>
+                    <property name="value">14</property>
+                </structure>
+                <structure>
+                    <property name="value">15</property>
+                </structure>
+                <structure>
+                    <property name="value">16</property>
+                </structure>
+                <structure>
+                    <property name="value">17</property>
+                </structure>
+                <structure>
+                    <property name="value">18</property>
+                </structure>
+                <structure>
+                    <property name="value">19</property>
+                </structure>
+                <structure>
+                    <property name="value">20</property>
+                </structure>
+                <structure>
+                    <property name="value">0</property>
+                    <property name="label">All Media</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="pPeriod" id="1370">
+            <text-property name="promptText">Period</text-property>
+            <property name="valueType">static</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">7</value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">3</property>
+                    <property name="label">3</property>
+                </structure>
+                <structure>
+                    <property name="value">7</property>
+                    <property name="label">7</property>
+                </structure>
+                <structure>
+                    <property name="value">15</property>
+                    <property name="label">15</property>
+                </structure>
+                <structure>
+                    <property name="value">30</property>
+                    <property name="label">30</property>
+                </structure>
+                <structure>
+                    <property name="value">60</property>
+                    <property name="label">60</property>
+                </structure>
+                <structure>
+                    <property name="value">90</property>
+                    <property name="label">90</property>
+                </structure>
+                <structure>
+                    <property name="value">0</property>
+                    <property name="label">All</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <data-mart-data-source name="Techtraker Data Source" id="168">
+            <property name="datamartURL">Data Objects/Techtraker</property>
+            <property name="accessType">latest</property>
+        </data-mart-data-source>
+    </data-sources>
+    <property name="linkedDataModels">
+        <data-mart-linked-data-model name="Topic Breakdown" id="169">
+            <property name="dataSource">Techtraker Data Source</property>
+            <property name="dataObject">Topic Breakdown</property>
+        </data-mart-linked-data-model>
+    </property>
+    <page-setup>
+        <simple-master-page name="TechtrackerSimpleMasterPage" id="1371" extends="Tecktracker.TechtrackerSimpleMasterPage"/>
+    </page-setup>
+    <body>
+        <extended-item extensionName="Chart" name="mainChart" id="36">
+            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Stacked" orientation="1">
+  <block>
+   <children _type="TitleBlock" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,695.25,347.625"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="enable.data.summarize" value="false"/>
+  <extendedProperties name="jschart.client.script" value="beforeGeneration: function(options) {&#13;&#10;    options.chart.spacingBottom = 5;&#13;&#10;    &#13;&#10;    options.xAxis.minPadding = 0;&#13;&#10;    options.xAxis.maxPadding = 0;&#13;&#10;    &#13;&#10;    var period = this.getReportParameter(&quot;pPeriod&quot;);&#13;&#10;    if (period &lt;= 30 &amp;&amp; period != 0) {&#13;&#10;        options.tooltip.xDateFormat = &quot;%b %d&quot;;&#13;&#10;    } else {&#13;&#10;        options.tooltip.xDateFormat = &quot;Week of: %b %d&quot;;&#13;&#10;    }&#13;&#10;        &#13;&#10;    if (period == 30) {&#13;&#10;        options.xAxis.labels.step = 2;&#13;&#10;&#13;&#10;    } else if (period == 0) {&#13;&#10;        var labelsAdded = {};&#13;&#10;        var keyFormat = &quot;%Y%m&quot;;&#13;&#10;        var labelFormat = &quot;%b&quot;;&#13;&#10;        &#13;&#10;        options.xAxis.labels.formatter = function() {&#13;&#10;            var key = actuate.report.HTML5Chart.Highcharts.dateFormat(keyFormat, this.value);  &#13;&#10;            if (!labelsAdded[key]) {&#13;&#10;                labelsAdded[key] = true;&#13;&#10;                return actuate.report.HTML5Chart.Highcharts.dateFormat(labelFormat, this.value);&#13;&#10;            }&#13;&#10;            return &quot;&quot;;&#13;&#10;        };  &#13;&#10;    }&#13;&#10;    &#13;&#10;},"/>
+  <extendedProperties name="jschart.navigator" value="false"/>
+  <extendedProperties name="jschart.zoom" value=""/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
+   <orthogonalSampleData dataSetRepresentation="5,4,12" seriesDefinitionIndex="0"/>
+   <orthogonalSampleData dataSetRepresentation="10.0,8.0,24.0" seriesDefinitionIndex="1"/>
+   <orthogonalSampleData dataSetRepresentation="15.0,12.0,36.0" seriesDefinitionIndex="2"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3" interval="1">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title visible="false">
+     <caption>
+      <font name="Lato"/>
+      <color _body=",255,128,128,128"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="neutral" labelPosition="4" stacked="true" riser="0">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;neutral&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="negative" labelPosition="4" stacked="true" riser="0">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;negative&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="positive" labelPosition="4" stacked="true" riser="0">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;positive&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes visible="false">
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;pubdate&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupType="1"/>
+    <sortKey/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <formatSpecifier _type="JavaDateFormatSpecifier" pattern="MMM d"/>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+            <property name="outputFormat">JS</property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">data["agencyId"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="javascript">params["pMediaId"].value</value>
+                    </simple-property-list>
+                    <property name="updateAggregation">true</property>
+                </structure>
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">data["topicId"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="javascript">params["pTopicId"].value</value>
+                    </simple-property-list>
+                    <property name="updateAggregation">true</property>
+                </structure>
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">data["period"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="javascript">params["pPeriod"].value</value>
+                    </simple-property-list>
+                    <property name="updateAggregation">true</property>
+                </structure>
+            </list-property>
+            <property name="inheritColumns">true</property>
+            <property name="height">3.1770833333333335in</property>
+            <property name="width">9.65625in</property>
+            <expression name="bookmark" type="javascript">"TopicBreakdown"</expression>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">agencyId</property>
+                    <text-property name="displayName">agencyId</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["agencyId"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">positive</property>
+                    <text-property name="displayName">positive</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["positive"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">negative</property>
+                    <text-property name="displayName">negative</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["negative"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">neutral</property>
+                    <text-property name="displayName">neutral</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["neutral"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">topicId</property>
+                    <text-property name="displayName">topicId</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["topicId"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">pubdate</property>
+                    <text-property name="displayName">pubdate</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["pubdate"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">period</property>
+                    <text-property name="displayName">period</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["period"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+            <property name="theme">Tecktracker.Techtracker Bar Chart Series Palette Reversed</property>
+            <property name="linkedDataModel">Topic Breakdown</property>
+            <property name="style">TechtrackerStyle</property>
+        </extended-item>
+        <extended-item extensionName="Chart" name="underChart" id="244">
+            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Area Chart" subType="Overlay">
+  <block>
+   <children _type="TitleBlock" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline visible="false">
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <cursor type="0"/>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,695.25,347.625"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+   <cursor type="0"/>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="false"/>
+  <extendedProperties name="enable.drill.series" value="false"/>
+  <extendedProperties name="jschart.scroll" value="false"/>
+  <extendedProperties name="jschart.range.selector" value="false"/>
+  <extendedProperties name="jschart.navigator" value="false"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.client.script" value="beforeGeneration: function(options) {&#13;&#10;    options.chart.spacingTop = 0;&#13;&#10;},"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
+   <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
+  </sampleData>
+  <interactivity enable="false"/>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title visible="false">
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="AreaSeries" seriesIdentifier="Series 1" stacked="false" translucent="false" curve="true">
+      <label visible="false">
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;totalsentiment&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <curveFitting _nil="1"/>
+      <cursor type="0"/>
+      <markers visible="false">
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <color _body=",255,234,234,234"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes visible="false">
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _type="NumberDataElement" value="0.0"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;pubdate&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupType="1"/>
+    <sortKey/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label visible="false">
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+            <property name="outputFormat">JS</property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">data["agencyId"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="javascript">params["pMediaId"].value</value>
+                    </simple-property-list>
+                    <property name="updateAggregation">true</property>
+                </structure>
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">data["topicId"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="javascript">params["pTopicId"].value</value>
+                    </simple-property-list>
+                    <property name="updateAggregation">true</property>
+                </structure>
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">data["period"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="javascript">params["pPeriod"].value</value>
+                    </simple-property-list>
+                    <property name="updateAggregation">true</property>
+                </structure>
+            </list-property>
+            <property name="inheritColumns">true</property>
+            <property name="height">0.8333333333333334in</property>
+            <property name="width">9.656in</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">positive</property>
+                    <text-property name="displayName">positive</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["positive"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">negative</property>
+                    <text-property name="displayName">negative</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["negative"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">neutral</property>
+                    <text-property name="displayName">neutral</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["neutral"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">totalsentiment</property>
+                    <text-property name="displayName">totalsentiment</text-property>
+                    <expression name="expression" type="javascript">data["positive"] + data["negative"] + data["neutral"];</expression>
+                    <property name="dataType">integer</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">agencyId</property>
+                    <text-property name="displayName">agencyId</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["agencyId"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">pubdate</property>
+                    <text-property name="displayName">pubdate</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["pubdate"]</expression>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="name">topicId</property>
+                    <text-property name="displayName">topicId</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["topicId"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">period</property>
+                    <text-property name="displayName">period</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["period"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+            <property name="theme">Tecktracker.Techtracker Area Chart</property>
+            <property name="linkedDataModel">Topic Breakdown</property>
+            <property name="style">TechtrackerStyle</property>
+        </extended-item>
+    </body>
+</report>

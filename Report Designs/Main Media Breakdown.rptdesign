@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.11.0.v202108101920</property>
+    <property name="units">in</property>
+    <property name="theme">Tecktracker.Techtracker</property>
+    <property name="layoutPreference">fixed layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">Report Libraries/Tecktracker.rptlibrary</property>
+            <property name="namespace">Tecktracker</property>
+        </structure>
+    </list-property>
+    <parameters>
+        <scalar-parameter name="pPeriod" id="1307">
+            <text-property name="promptText">Period</text-property>
+            <property name="valueType">static</property>
+            <property name="dataType">integer</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">7</value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">3</property>
+                    <property name="label">3</property>
+                </structure>
+                <structure>
+                    <property name="value">7</property>
+                    <property name="label">7</property>
+                </structure>
+                <structure>
+                    <property name="value">15</property>
+                    <property name="label">15</property>
+                </structure>
+                <structure>
+                    <property name="value">30</property>
+                    <property name="label">30</property>
+                </structure>
+                <structure>
+                    <property name="value">60</property>
+                    <property name="label">60</property>
+                </structure>
+                <structure>
+                    <property name="value">90</property>
+                    <property name="label">90</property>
+                </structure>
+                <structure>
+                    <property name="value">0</property>
+                    <property name="label">All</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">list-box</property>
+            <property name="mustMatch">true</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="pSentiment" id="37">
+            <property name="hidden">false</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">ALL</value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">POS</property>
+                    <property name="label">POS</property>
+                </structure>
+                <structure>
+                    <property name="value">NEG</property>
+                    <property name="label">NEG</property>
+                </structure>
+                <structure>
+                    <property name="value">ALL</property>
+                    <property name="label">ALL</property>
+                </structure>
+                <structure>
+                    <property name="value">POSNEG</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">radio-button</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="pSorting" id="39">
+            <property name="hidden">false</property>
+            <property name="valueType">static</property>
+            <property name="isRequired">true</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">DESC</value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">ASC</property>
+                </structure>
+                <structure>
+                    <property name="value">DESC</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">radio-button</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+        <scalar-parameter name="pCountry" id="949">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">ALL</value>
+            </simple-property-list>
+            <list-property name="selectionList">
+                <structure>
+                    <property name="value">ALL</property>
+                </structure>
+                <structure>
+                    <property name="value">US</property>
+                </structure>
+                <structure>
+                    <property name="value">INTL</property>
+                </structure>
+            </list-property>
+            <property name="paramType">simple</property>
+            <property name="controlType">radio-button</property>
+            <property name="fixedOrder">true</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <data-mart-data-source name="Techtracker Data Source" id="140">
+            <property name="datamartURL">Data Objects/Techtraker</property>
+            <property name="accessType">latest</property>
+        </data-mart-data-source>
+    </data-sources>
+    <property name="linkedDataModels">
+        <data-mart-linked-data-model name="Media Breakdown" id="948">
+            <property name="dataSource">Techtracker Data Source</property>
+            <property name="dataObject">Media Breakdown</property>
+        </data-mart-linked-data-model>
+    </property>
+    <page-setup>
+        <simple-master-page name="TechtrackerSimpleMasterPage" id="1308" extends="Tecktracker.TechtrackerSimpleMasterPage"/>
+    </page-setup>
+    <body>
+        <extended-item extensionName="Chart" id="36">
+            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Stacked" orientation="0">
+  <block>
+   <children _type="TitleBlock" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,695.25,347.625"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="enable.data.summarize" value="false"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.client.script" value="beforeGeneration: function(options) {&#13;&#10;    var html = &quot;&lt;div style=\&quot;font-family:Arial; font-size:10pt; display: none\&quot;&gt;&quot;;&#13;&#10;    for (var i = 0; i &lt; options.xAxis.categories.length; i++) {&#13;&#10;        html += &quot;&lt;div&gt;&quot; + options.xAxis.categories[i] + &quot;&lt;/div&gt;&quot;;&#13;&#10;    }&#13;&#10;    html += &quot;&lt;/div&gt;&quot;;&#13;&#10;    var $div = $(html);&#13;&#10;    $div.appendTo(&quot;body&quot;);&#13;&#10;    var width = $div.width();&#13;&#10;    $div.detach();&#13;&#10;&#13;&#10;    options.xAxis.labels = {&#13;&#10;        format: &quot;&lt;div style=\&quot;width:&quot; + width + &quot;px;text-align:left\&quot;&gt;{value}&lt;/div&gt;&quot;,&#13;&#10;        useHTML: true&#13;&#10;    };&#13;&#10;},&#13;&#10;&#13;&#10;beforeDrawSeries: function(series, seriesOptions, chart, seriesIndex) {&#13;&#10;    if (series.name == &#039;positive&#039;){&#13;&#10;        seriesOptions.color = &quot;#38c645&quot;;&#13;&#10;    } else if (series.name == &#039;negative&#039;){&#13;&#10;        seriesOptions.color = &quot;#9b151e&quot;;&#13;&#10;    } else{&#13;&#10;        seriesOptions.color = &quot;#aaaaaa&quot;;&#13;&#10;    }&#13;&#10;   &#13;&#10;   var pSent = this.getReportParameter(&quot;pSentiment&quot;);&#13;&#10;   seriesOptions.dataLabels.formatter = function() {&#13;&#10;        var newPercentString = &quot;&quot;;&#13;&#10;        if (this.point.shapeArgs.height &gt;31){&#13;&#10;            if (pSent == &quot;POSNEG&quot; || pSent == &quot;ALL&quot;){&#13;&#10;                newPercentString = Math.round((this.y / this.total) * 100) + &quot;%&quot;;&#13;&#10;            }&#13;&#10;        }&#13;&#10;        return newPercentString;&#13;&#10;   }&#13;&#10;},&#13;&#10;&#13;&#10;afterRendering: function(chart) {&#13;&#10;    if (this.getReportParameter(&quot;pSentiment&quot;) == &quot;POS&quot;) {&#13;&#10;        chart.getCore().series[0].hide();&#13;&#10;        chart.getCore().series[1].hide();&#13;&#10;        chart.getCore().series[2].hide();&#13;&#10;    } else if (this.getReportParameter(&quot;pSentiment&quot;) == &quot;NEG&quot;) {&#13;&#10;        chart.getCore().series[0].hide();&#13;&#10;        chart.getCore().series[1].hide();&#13;&#10;        chart.getCore().series[3].hide();&#13;&#10;    } else if (this.getReportParameter(&quot;pSentiment&quot;) == &quot;POSNEG&quot;) {&#13;&#10;        chart.getCore().series[0].hide();&#13;&#10;        chart.getCore().series[1].hide();&#13;&#10;    }&#13;&#10;},"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="&#039;A&#039;,&#039;B&#039;,&#039;C&#039;,&#039;D&#039;,&#039;E&#039;"/>
+   <orthogonalSampleData dataSetRepresentation="5,4,12" seriesDefinitionIndex="0"/>
+   <orthogonalSampleData dataSetRepresentation="10.0,8.0,24.0" seriesDefinitionIndex="1"/>
+   <orthogonalSampleData dataSetRepresentation="15.0,12.0,36.0" seriesDefinitionIndex="2"/>
+   <orthogonalSampleData dataSetRepresentation="20.0,16.0,48.0" seriesDefinitionIndex="3"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="2">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title visible="false">
+     <caption>
+      <font name="Lato"/>
+      <color _body=",255,128,128,128"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="positive" labelPosition="4" stacked="true" riser="0">
+      <label visible="true">
+       <caption>
+        <font name="Lato"/>
+        <color _body=",255,255,255,255"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;positive&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint>
+       <components type="3"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="negative" labelPosition="4" stacked="true" riser="0">
+      <label visible="true">
+       <caption>
+        <font name="Lato"/>
+        <color _body=",255,255,255,255"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;negative&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint>
+       <components type="3"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="neutral" labelPosition="4" stacked="true" riser="0">
+      <label visible="true">
+       <caption>
+        <color _body=",255,255,255,255"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;neutral&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint>
+       <components type="3"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" visible="false" seriesIdentifier="Series 4" labelPosition="4" stacked="true" riser="0">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;totalsentiment&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions sorting="0">
+    <query definition=""/>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;agency&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true"/>
+    <sortKey definition="row[&quot;totalsentiment&quot;]"/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+            <property name="outputFormat">JS</property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">data["period"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="javascript">params["pPeriod"].value</value>
+                    </simple-property-list>
+                    <property name="updateAggregation">true</property>
+                </structure>
+                <structure>
+                    <property name="operator">is-true</property>
+                    <expression name="expr" type="javascript">if (params["pCountry"].value == "ALL")
+	true;
+else if (params["pCountry"].value == "US" &amp;&amp; data["countrycode"] == "US")
+	true;
+else if (params["pCountry"].value == "INTL" &amp;&amp; data["countrycode"] != "US")
+	true;
+else
+	false;</expression>
+                    <property name="updateAggregation">true</property>
+                </structure>
+                <structure>
+                    <property name="operator">top-n</property>
+                    <expression name="expr" type="javascript">if (params["pSentiment"].value == "POS"){&#13;
+	data["positive"];&#13;
+}else if (params["pSentiment"].value == "NEG"){&#13;
+	data["negative"];&#13;
+}else if(params["pSentiment"].value == "POSNEG"){&#13;
+	data["positive"] + data["negative"];&#13;
+}else if (params["pSentiment"].value == "ALL"){&#13;
+	data["positive"]+data["negative"]+data["neutral"];&#13;
+}</expression>
+                    <simple-property-list name="value1">
+                        <value type="javascript">7</value>
+                    </simple-property-list>
+                    <property name="updateAggregation">true</property>
+                </structure>
+            </list-property>
+            <property name="inheritColumns">true</property>
+            <property name="height">310px</property>
+            <property name="width">930px</property>
+            <expression name="bookmark" type="javascript">"mediaBreakdown-small"</expression>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">positive</property>
+                    <text-property name="displayName">positive</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["positive"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">negative</property>
+                    <text-property name="displayName">negative</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["negative"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">neutral</property>
+                    <text-property name="displayName">neutral</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["neutral"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">agency</property>
+                    <text-property name="displayName">agency</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["agency"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">totalsentiment</property>
+                    <text-property name="displayName">totalsentiment</text-property>
+                    <expression name="expression" type="javascript">var valueT = null;&#13;
+if (params["pSentiment"].value == "POS"){&#13;
+	valueT = row["positive"];&#13;
+}else if (params["pSentiment"].value == "NEG"){&#13;
+	valueT = row["negative"];&#13;
+}else if (params["pSentiment"].value == "POSNEG"){&#13;
+	valueT = (row["positive"]+row["negative"]);&#13;
+}else if(params["pSentiment"].value == "ALL"){&#13;
+	valueT = (row["positive"]+row["negative"]+row["neutral"]);&#13;
+}&#13;
+if(params["pSorting"].value == "ASC"){&#13;
+	valueT = valueT*-1;&#13;
+}&#13;
+valueT;</expression>
+                    <property name="dataType">integer</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">period</property>
+                    <text-property name="displayName">period</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["period"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">countrycode</property>
+                    <text-property name="displayName">countrycode</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["countrycode"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <property name="theme">Tecktracker.Techtracker Bar Chart</property>
+            <property name="linkedDataModel">Media Breakdown</property>
+        </extended-item>
+        <extended-item extensionName="Chart" id="38">
+            <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Bar Chart" subType="Stacked" orientation="0">
+  <block>
+   <children _type="TitleBlock" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,695.25,347.625"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="enable.data.summarize" value="false"/>
+  <extendedProperties name="jschart.client.script" value="beforeGeneration: function(options) {&#13;&#10;    var html = &quot;&lt;div style=\&quot;font-family:Arial; font-size:10pt; display: none\&quot;&gt;&quot;;&#13;&#10;    for (var i = 0; i &lt; options.xAxis.categories.length; i++) {&#13;&#10;        html += &quot;&lt;div&gt;&quot; + options.xAxis.categories[i] + &quot;&lt;/div&gt;&quot;;&#13;&#10;    }&#13;&#10;    html += &quot;&lt;/div&gt;&quot;;&#13;&#10;    var $div = $(html);&#13;&#10;    $div.appendTo(&quot;body&quot;);&#13;&#10;    var width = $div.width();&#13;&#10;    $div.detach();&#13;&#10;&#13;&#10;    options.xAxis.labels = {&#13;&#10;        format: &quot;&lt;div style=\&quot;width:&quot; + width + &quot;px;text-align:left\&quot;&gt;{value}&lt;/div&gt;&quot;,&#13;&#10;        useHTML: true&#13;&#10;    };&#13;&#10;},&#13;&#10;&#13;&#10;beforeDrawSeries: function(series, seriesOptions, chart, seriesIndex) {&#13;&#10;    if (series.name == &#039;positive&#039;){&#13;&#10;        seriesOptions.color = &quot;#38c645&quot;;&#13;&#10;    } else if (series.name == &#039;negative&#039;){&#13;&#10;        seriesOptions.color = &quot;#9b151e&quot;;&#13;&#10;    } else{&#13;&#10;        seriesOptions.color = &quot;#aaaaaa&quot;;&#13;&#10;    }&#13;&#10;   &#13;&#10;   var pSent = this.getReportParameter(&quot;pSentiment&quot;);&#13;&#10;   seriesOptions.dataLabels.formatter = function() {&#13;&#10;        var newPercentString = &quot;&quot;;&#13;&#10;        if (this.point.shapeArgs.height &gt;31){&#13;&#10;            if (pSent == &quot;POSNEG&quot; || pSent == &quot;ALL&quot;){&#13;&#10;                newPercentString = Math.round((this.y / this.total) * 100) + &quot;%&quot;;&#13;&#10;            }&#13;&#10;        }&#13;&#10;        return newPercentString;&#13;&#10;   }&#13;&#10;},&#13;&#10;&#13;&#10;afterRendering: function(chart) {&#13;&#10;    if (this.getReportParameter(&quot;pSentiment&quot;) == &quot;POS&quot;) {&#13;&#10;        chart.getCore().series[0].hide();&#13;&#10;        chart.getCore().series[1].hide();&#13;&#10;        chart.getCore().series[2].hide();&#13;&#10;    } else if (this.getReportParameter(&quot;pSentiment&quot;) == &quot;NEG&quot;) {&#13;&#10;        chart.getCore().series[0].hide();&#13;&#10;        chart.getCore().series[1].hide();&#13;&#10;        chart.getCore().series[3].hide();&#13;&#10;    } else if (this.getReportParameter(&quot;pSentiment&quot;) == &quot;POSNEG&quot;) {&#13;&#10;        chart.getCore().series[0].hide();&#13;&#10;        chart.getCore().series[1].hide();&#13;&#10;    }&#13;&#10;},"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="A, B, C"/>
+   <orthogonalSampleData dataSetRepresentation="5,4,12" seriesDefinitionIndex="0"/>
+   <orthogonalSampleData dataSetRepresentation="10.0,8.0,24.0" seriesDefinitionIndex="1"/>
+   <orthogonalSampleData dataSetRepresentation="15.0,12.0,36.0" seriesDefinitionIndex="2"/>
+   <orthogonalSampleData dataSetRepresentation="20.0,16.0,48.0" seriesDefinitionIndex="3"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes>
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title visible="false">
+     <caption>
+      <font name="Lato"/>
+      <color _body=",255,128,128,128"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="positive" labelPosition="4" stacked="true" riser="0">
+      <label visible="true">
+       <caption>
+        <font name="Lato"/>
+        <color _body=",255,255,255,255"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;positive&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint>
+       <components type="3"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="negative" labelPosition="4" stacked="true" riser="0">
+      <label visible="true">
+       <caption>
+        <font name="Lato"/>
+        <color _body=",255,255,255,255"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;negative&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint>
+       <components type="3"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" seriesIdentifier="neutral" labelPosition="4" stacked="true" riser="0">
+      <label visible="true">
+       <caption>
+        <color _body=",255,255,255,255"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;neutral&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <dataPoint>
+       <components type="3"/>
+      </dataPoint>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <seriesDefinitions>
+     <query definition=""/>
+     <series _type="BarSeries" visible="false" seriesIdentifier="total" labelPosition="4" stacked="true" riser="0">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;totalsentiment&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions sorting="0">
+    <query definition=""/>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;agency&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true"/>
+    <sortKey definition="row[&quot;totalsentiment&quot;]"/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+            <property name="outputFormat">JS</property>
+            <list-property name="filter">
+                <structure>
+                    <property name="operator">eq</property>
+                    <expression name="expr" type="javascript">data["period"]</expression>
+                    <simple-property-list name="value1">
+                        <value type="javascript">params["pPeriod"].value</value>
+                    </simple-property-list>
+                    <property name="updateAggregation">true</property>
+                </structure>
+                <structure>
+                    <property name="operator">is-true</property>
+                    <expression name="expr" type="javascript">if (params["pCountry"].value == "ALL")
+	true;
+else if (params["pCountry"].value == "US" &amp;&amp; data["countrycode"] == "US")
+	true;
+else if (params["pCountry"].value == "INTL" &amp;&amp; data["countrycode"] != "US")
+	true;
+else
+	false;</expression>
+                    <property name="updateAggregation">true</property>
+                </structure>
+                <structure>
+                    <property name="operator">top-n</property>
+                    <expression name="expr" type="javascript">if (params["pSentiment"].value == "POS"){&#13;
+	data["positive"];&#13;
+}else if (params["pSentiment"].value == "NEG"){&#13;
+	data["negative"];&#13;
+}else if(params["pSentiment"].value == "POSNEG"){&#13;
+	data["positive"] + data["negative"];&#13;
+}else if (params["pSentiment"].value == "ALL"){&#13;
+	data["positive"]+data["negative"]+data["neutral"];&#13;
+}</expression>
+                    <simple-property-list name="value1">
+                        <value type="javascript">20</value>
+                    </simple-property-list>
+                    <property name="updateAggregation">true</property>
+                </structure>
+            </list-property>
+            <property name="inheritColumns">true</property>
+            <property name="height">800px</property>
+            <property name="width">930px</property>
+            <expression name="bookmark" type="javascript">"mediaBreakdown-large"</expression>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">agency</property>
+                    <text-property name="displayName">agency</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["agency"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">positive</property>
+                    <text-property name="displayName">positive</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["positive"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">negative</property>
+                    <text-property name="displayName">negative</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["negative"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">neutral</property>
+                    <text-property name="displayName">neutral</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["neutral"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">totalsentiment</property>
+                    <text-property name="displayName">totalsentiment</text-property>
+                    <expression name="expression" type="javascript">var valueT = null;&#13;
+if (params["pSentiment"].value == "POS"){&#13;
+	valueT = row["positive"];&#13;
+}else if (params["pSentiment"].value == "NEG"){&#13;
+	valueT = row["negative"];&#13;
+}else if (params["pSentiment"].value == "POSNEG"){&#13;
+	valueT = (row["positive"]+row["negative"]);&#13;
+}else if(params["pSentiment"].value == "ALL"){&#13;
+	valueT = (row["positive"]+row["negative"]+row["neutral"]);&#13;
+}&#13;
+if(params["pSorting"].value == "ASC"){&#13;
+	valueT = valueT*-1;&#13;
+}&#13;
+valueT;</expression>
+                    <property name="dataType">integer</property>
+                    <property name="allowExport">true</property>
+                </structure>
+                <structure>
+                    <property name="name">countrycode</property>
+                    <text-property name="displayName">countrycode</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["countrycode"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">period</property>
+                    <text-property name="displayName">period</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["period"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+            <property name="theme">Tecktracker.Techtracker Bar Chart</property>
+            <property name="linkedDataModel">Media Breakdown</property>
+        </extended-item>
+    </body>
+</report>
